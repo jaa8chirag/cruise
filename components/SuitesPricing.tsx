@@ -27,7 +27,7 @@ export default function SuitesPricing({ onReserveSuite }: SuitesPricingProps) {
             Select Your All-Inclusive Residence
           </h2>
           <p className="font-jakarta text-slate-600 dark:text-slate-400 text-sm md:text-base max-w-xl">
-            Every stateroom aboard Aurelia is an expansive, private terrace suite facing the infinite horizon with dedicated butler assistance.
+            Every stateroom aboard Oshin Shipping is an expansive, private terrace suite facing the infinite horizon with dedicated butler assistance.
           </p>
         </div>
 
@@ -208,7 +208,7 @@ export default function SuitesPricing({ onReserveSuite }: SuitesPricingProps) {
             </div>
 
             <h3 className="font-playfair text-2xl font-bold text-slate-900 dark:text-slate-100 mt-4">
-              The Royal Aurelia Owner’s Suite
+              The Royal Oshin Owner’s Suite
             </h3>
             <p className="font-jakarta text-xs text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
               Commanding bridge-view bow stateroom, private heated hydrotherapy pool, grand dining table for 8, and dedicated security salon.
@@ -247,7 +247,7 @@ export default function SuitesPricing({ onReserveSuite }: SuitesPricingProps) {
 
           <div className="mt-8">
             <button
-              onClick={() => handleReserve('The Royal Aurelia Owner’s Suite', durationTab === '3' ? '$6,000' : '$5,500')}
+              onClick={() => handleReserve('The Royal Oshin Owner’s Suite', durationTab === '3' ? '$6,000' : '$5,500')}
               className="w-full py-3.5 rounded-lg border border-amber-500/40 text-amber-600 dark:text-amber-400 hover:bg-amber-500/10 font-jakarta text-xs uppercase tracking-widest transition-all font-bold"
             >
               Inquire Sovereign Suite

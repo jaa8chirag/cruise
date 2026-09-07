@@ -13,7 +13,7 @@ export default function ShipExperienceBento() {
             NOCTURNAL SPLENDOR
           </span>
           <h2 className="font-playfair text-3xl md:text-5xl text-slate-900 dark:text-slate-100 font-bold">
-            Life Aboard Aurelia Flagship
+            Life Aboard Oshin Flagship
           </h2>
           <p className="font-jakarta text-slate-600 dark:text-slate-400 text-sm md:text-base font-light">
             An opulent world engineered for connoisseurs of the rare and timeless. Revel in six-star maritime sanctuaries curated by masters of fine living.

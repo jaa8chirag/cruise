@@ -3,9 +3,9 @@ import './globals.css';
 import { ThemeProvider } from './providers';
 
 export const metadata: Metadata = {
-  title: 'Aurelia Ocean Voyages | Ultra-Luxury Mega Yacht Expeditions',
+  title: 'Oshin Shipping | Ultra-Luxury Mega Yacht & Cruise Expeditions',
   description: 'Experience bespoke luxury ocean voyages across Lakshadweep, Goa, Dubai, and the Mediterranean with Michelin dining, private suites, and dedicated butler service.',
-  keywords: ['luxury cruise', 'superyacht charter', 'Lakshadweep cruise', 'Aurelia ocean voyages', 'all-inclusive luxury cruise'],
+  keywords: ['luxury cruise', 'superyacht charter', 'Oshin Shipping', 'Lakshadweep cruise', 'ocean voyages', 'all-inclusive luxury cruise'],
 };
 
 export default function RootLayout({

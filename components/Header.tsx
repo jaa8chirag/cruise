@@ -24,10 +24,10 @@ export default function Header({ onReserveClick }: HeaderProps) {
           </div>
           <div className="flex flex-col text-left">
             <span className="font-playfair text-xl tracking-[0.2em] font-bold text-slate-900 dark:text-slate-100 uppercase">
-              Aurelia
+              OSHIN
             </span>
             <span className="font-jakarta text-[10px] tracking-[0.28em] text-amber-600 dark:text-amber-400 font-semibold uppercase -mt-1">
-              Ocean Voyages
+              SHIPPING
             </span>
           </div>
         </a>
@@ -57,7 +57,7 @@ export default function Header({ onReserveClick }: HeaderProps) {
           {/* Hotline */}
           <div className="hidden lg:flex items-center gap-2 px-3.5 py-1.5 bg-slate-100 dark:bg-slate-800/60 border border-amber-500/20 rounded-full text-slate-700 dark:text-slate-300 text-xs tracking-wider">
             <Phone className="w-3.5 h-3.5 text-amber-500" />
-            <span className="font-semibold">+1 (800) AURELIA</span>
+            <span className="font-semibold">+1 (800) OSHIN-SHIP</span>
           </div>
 
           {/* Theme Mode Switcher */}
@@ -124,7 +124,7 @@ export default function Header({ onReserveClick }: HeaderProps) {
           <div className="pt-2 flex items-center justify-between text-xs text-slate-600 dark:text-slate-400">
             <span className="flex items-center gap-1.5">
               <Phone className="w-3.5 h-3.5 text-amber-500" />
-              +1 (800) AURELIA
+              +1 (800) OSHIN-SHIP
             </span>
           </div>
         </div>

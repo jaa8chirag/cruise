@@ -25,7 +25,7 @@ export default function Footer() {
               <span className="font-jakarta text-xs text-amber-600 dark:text-amber-400 tracking-[0.25em] uppercase font-bold">
                 PRIVATE DISPATCH
               </span>
-              <h3 className="font-playfair text-2xl md:text-3xl font-bold">The Aurelia Gazette</h3>
+              <h3 className="font-playfair text-2xl md:text-3xl font-bold">The Oshin Gazette</h3>
               <p className="font-jakarta text-xs md:text-sm text-slate-600 dark:text-slate-400 max-w-lg leading-relaxed">
                 Receive bespoke nautical itineraries, preview private deck configurations, and access unlisted charter expeditions across remote archipelagoes.
               </p>
@@ -64,9 +64,9 @@ export default function Footer() {
                 THE FLEET
               </span>
               <ul className="space-y-2 font-jakarta text-xs text-slate-600 dark:text-slate-400">
-                <li className="hover:text-amber-500 transition-colors"><a href="#">Aurelia Sovereign</a></li>
-                <li className="hover:text-amber-500 transition-colors"><a href="#">Aurelia Celestia</a></li>
-                <li className="hover:text-amber-500 transition-colors"><a href="#">Aurelia Aurora Borealis</a></li>
+                <li className="hover:text-amber-500 transition-colors"><a href="#">Oshin Sovereign</a></li>
+                <li className="hover:text-amber-500 transition-colors"><a href="#">Oshin Celestia</a></li>
+                <li className="hover:text-amber-500 transition-colors"><a href="#">Oshin Aurora</a></li>
                 <li className="hover:text-amber-500 transition-colors"><a href="#">Private Zodiac Expeditions</a></li>
                 <li className="hover:text-amber-500 transition-colors"><a href="#">Deck & Helipad Specs</a></li>
               </ul>
@@ -127,7 +127,7 @@ export default function Footer() {
           </div>
 
           <div className="text-right">
-            <p>© 2025 Aurelia Ocean Voyages Ltd. Monaco • London • Singapore. All rights reserved.</p>
+            <p>© 2025 Oshin Shipping Ltd. Monaco • London • Singapore. All rights reserved.</p>
           </div>
 
         </div>

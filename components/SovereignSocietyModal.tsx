@@ -112,7 +112,7 @@ export default function SovereignSocietyModal({ isOpen, onClose, initialSuite, i
             </div>
             <h3 className="font-playfair text-2xl font-bold">Request Transmitted</h3>
             <p className="font-jakarta text-xs text-slate-600 dark:text-slate-300">
-              Thank you, <span className="font-bold">{name}</span>. Senior Aurelia Concierge will contact you within 2 hours at <span className="font-bold">{email}</span> with your bespoke stateroom allocation.
+              Thank you, <span className="font-bold">{name}</span>. Senior Oshin Shipping Concierge will contact you within 2 hours at <span className="font-bold">{email}</span> with your bespoke stateroom allocation.
             </p>
             <button
               onClick={onClose}

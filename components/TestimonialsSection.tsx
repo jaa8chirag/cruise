@@ -28,7 +28,7 @@ export default function TestimonialsSection() {
               ))}
             </div>
             <blockquote className="font-playfair text-base md:text-lg text-slate-800 dark:text-slate-200 font-light italic leading-relaxed">
-              “Aurelia redefines nautical hospitality. The Lakshadweep passage felt less like a cruise and more like an intimate grand yacht charter with Michelin-pedigree dining at every single meal.”
+              “Oshin Shipping redefines nautical hospitality. The Lakshadweep passage felt less like a cruise and more like an intimate grand yacht charter with Michelin-pedigree dining at every single meal.”
             </blockquote>
           </div>
           <div className="pt-6 mt-6 border-t border-slate-200 dark:border-slate-800">
@@ -48,7 +48,7 @@ export default function TestimonialsSection() {
               ))}
             </div>
             <blockquote className="font-playfair text-base md:text-lg text-slate-800 dark:text-slate-200 font-light italic leading-relaxed">
-              “From the zero-noise stabilization to the private butler service who arranged our secluded sunset sandbank in Kadmat, Aurelia is without peer in the Indian Ocean.”
+              “From the zero-noise stabilization to the private butler service who arranged our secluded sunset sandbank in Kadmat, Oshin Shipping is without peer in the Indian Ocean.”
             </blockquote>
           </div>
           <div className="pt-6 mt-6 border-t border-slate-200 dark:border-slate-800">

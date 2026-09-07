@@ -27,7 +27,7 @@ export default function HeroSection({ onSearchSubmit }: HeroSectionProps) {
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/aurelia_hero_sunset.jpg"
-          alt="Aurelia Superyacht cruising at golden dusk"
+          alt="Oshin Shipping Superyacht cruising at golden dusk"
           fill
           priority
           className="object-cover object-center scale-105 transition-transform duration-1000 ease-out"
@@ -165,7 +165,7 @@ export default function HeroSection({ onSearchSubmit }: HeroSectionProps) {
               >
                 <option value="2-ocean">2 Guests • Grand Ocean Balcony</option>
                 <option value="2-penthouse">2 Guests • Horizon Penthouse Duplex</option>
-                <option value="4-owner">4 Guests • Royal Aurelia Suite</option>
+                <option value="4-owner">4 Guests • Royal Oshin Suite</option>
                 <option value="1-solo">1 Guest • Private Veranda Studio</option>
               </select>
             </div>

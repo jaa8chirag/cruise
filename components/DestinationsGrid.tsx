@@ -15,7 +15,7 @@ const destinationsData: DestinationItem[] = [
     badge: 'Exclusive Access',
     description: 'Remote anchorages in Kadmat and Kavaratti, bespoke scuba reef safaris, and uninhabited private sandbank dinners.',
     itineraryDays: [
-      { day: 1, title: 'Embarkation & Sundowner Welcome', description: 'Board Aurelia in Cochin, champagne reception on aft deck as we sail into sunset.' },
+      { day: 1, title: 'Embarkation & Sundowner Welcome', description: 'Board Oshin Flagship in Cochin, champagne reception on aft deck as we sail into sunset.' },
       { day: 2, title: 'Kavaratti Lagoon Exploration', description: 'Private Zodiac tender to shallow coral reefs with marine biologists.' },
       { day: 3, title: 'Kadmat Island Coral Sanctuary', description: 'Deep sea diving, jet-ski safaris, and open-air beach dining under coconut palms.' },
       { day: 4, title: 'Uninhabited Sandbank Banquet', description: 'Helicopter transfer to isolated sandbank for private chef seafood barbecue.' },
