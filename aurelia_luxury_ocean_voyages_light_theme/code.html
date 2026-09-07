@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-error-container": "#93000a",
+          "outline-variant": "#d1c5af",
+          "on-tertiary-fixed-variant": "#5d4200",
+          "surface-pure": "#ffffff",
+          "surface": "#faf8f5",
+          "text-navy": "#1b2636",
+          "on-secondary-container": "#5a6577",
+          "on-surface-variant": "#4b5563",
+          "secondary-fixed": "#d8e3f9",
+          "champagne-gold": "#d4af37",
+          "inverse-on-surface": "#f2f0ed",
+          "surface-bright": "#fbf9f6",
+          "primary": "#b8860b",
+          "primary-container": "#c59b27",
+          "surface-container-lowest": "#ffffff",
+          "surface-porcelain": "#faf8f5",
+          "surface-container-high": "#eae8e5",
+          "surface-tint": "#b8860b",
+          "on-tertiary-container": "#4a3300",
+          "border-gold-subtle": "#dfcaa0",
+          "secondary-fixed-dim": "#bcc7dc",
+          "tertiary": "#8c7b65",
+          "secondary-container": "#eef2f8",
+          "pale-gold-wash": "#fdfbf7",
+          "deep-ochre": "#b8860b",
+          "inverse-surface": "#1b2636",
+          "on-secondary-fixed-variant": "#3c4759",
+          "on-background": "#0f172a",
+          "text-slate": "#475569",
+          "surface-container-highest": "#e5e1da",
+          "surface-sand": "#f3efe8",
+          "inverse-primary": "#eec14b",
+          "text-obsidian": "#0e1824",
+          "error": "#ba1a1a",
+          "on-error": "#ffffff",
+          "secondary": "#545f71",
+          "primary-fixed": "#ffdf98",
+          "on-primary-container": "#ffffff",
+          "surface-ivory": "#f4efea",
+          "surface-variant": "#f4efea",
+          "border-hairline": "#e8e1d5",
+          "tertiary-fixed-dim": "#f7bd48",
+          "on-primary-fixed": "#251a00",
+          "surface-container-low": "#faf8f5",
+          "text-muted": "#8a94a6",
+          "error-container": "#ffdad6",
+          "primary-fixed-dim": "#eec14b",
+          "surface-dim": "#eae6df",
+          "burnished-gold": "#c59b27",
+          "on-surface": "#0f172a",
+          "tertiary-fixed": "#ffdea6",
+          "on-secondary": "#ffffff",
+          "on-tertiary": "#ffffff",
+          "on-primary": "#ffffff",
+          "outline": "#c9beaa",
+          "tertiary-container": "#fbf4e4",
+          "on-primary-fixed-variant": "#5a4300",
+          "background": "#faf8f5",
+          "on-tertiary-fixed": "#271900",
+          "surface-container": "#f4efea",
+          "on-secondary-fixed": "#111c2c"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "space-2xl": "3rem",
+          "space-5xl": "8rem",
+          "space-xl": "2rem",
+          "gutter-tablet": "1.5rem",
+          "gutter-desktop": "2rem",
+          "space-lg": "1.5rem",
+          "gutter-mobile": "1rem",
+          "space-md": "1rem",
+          "space-sm": "0.75rem",
+          "space-xs": "0.5rem",
+          "margin-tablet": "2rem",
+          "space-3xl": "4rem",
+          "container-max": "88rem",
+          "margin-mobile": "1.25rem",
+          "space-xxs": "0.25rem",
+          "space-4xl": "6rem",
+          "margin-desktop": "3rem"
+        },
+        "fontFamily": {
+          "display-hero-mobile": [
+            "Playfair Display"
+          ],
+          "body-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-md-mobile": [
+            "Playfair Display"
+          ],
+          "headline-sm": [
+            "Playfair Display"
+          ],
+          "headline-lg": [
+            "Playfair Display"
+          ],
+          "label-md": [
+            "Plus Jakarta Sans"
+          ],
+          "title-editorial": [
+            "Playfair Display"
+          ],
+          "body-md": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-md": [
+            "Playfair Display"
+          ],
+          "display-hero": [
+            "Playfair Display"
+          ],
+          "headline-lg-mobile": [
+            "Playfair Display"
+          ],
+          "body-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "label-caps": [
+            "Plus Jakarta Sans"
+          ]
+        },
+        "fontSize": {
+          "display-hero-mobile": [
+            "38px",
+            {
+              "lineHeight": "46px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "body-sm": [
+            "13px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-md-mobile": [
+            "26px",
+            {
+              "lineHeight": "34px",
+              "letterSpacing": "-0.005em",
+              "fontWeight": "500"
+            }
+          ],
+          "headline-sm": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "0em",
+              "fontWeight": "500"
+            }
+          ],
+          "headline-lg": [
+            "48px",
+            {
+              "lineHeight": "58px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "400"
+            }
+          ],
+          "label-md": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0.02em",
+              "fontWeight": "500"
+            }
+          ],
+          "title-editorial": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-md": [
+            "15px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "0.005em",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-md": [
+            "32px",
+            {
+              "lineHeight": "40px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "500"
+            }
+          ],
+          "display-hero": [
+            "64px",
+            {
+              "lineHeight": "76px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-lg-mobile": [
+            "32px",
+            {
+              "lineHeight": "40px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "body-lg": [
+            "18px",
+            {
+              "lineHeight": "30px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "300"
+            }
+          ],
+          "label-caps": [
+            "11px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.18em",
+              "fontWeight": "600"
+            }
+          ]
+        }
+      },
+    },
+  }
+</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased selection:bg-primary selection:text-white"><header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-xl border-b border-[#c59b27]/20 shadow-[0_4px_24px_rgba(0,0,0,0.06)]"><div class="h-20 max-w-[88rem] mx-auto px-gutter-desktop flex items-center justify-between gap-space-lg"><div class="flex items-center gap-space-md"><img alt="Aurelia Ocean Voyages Emblem" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XVeqOQBP3yJRQirlcvsr5dPRqGeu9M9N6vikwTWmHrqN4akNvg3p_3k-2mq2r84MUMTsVe3emRJKL5vdhgzhsgDOLXdIIGyFe6h5js6DXtxUgxnSzsmBO56cgyaFb-gKrCpbzW70Yvmx7ZZAF0n7tqmN50QlUZppiiY8jWYiDKAtRF9i9IkUbRuE8VHOouyoaEfVFowQmThPVIl_iI35bSQ49PP9z9rfFW5xjNBHkiX_IZcUYD0d1WZw"/><a class="flex flex-col text-left" data-path="destinations" href="#"><span class="font-title-editorial text-title-editorial tracking-[0.2em] uppercase text-text-obsidian font-bold">AURELIA</span><span class="font-label-caps text-label-caps text-burnished-gold tracking-[0.28em] uppercase -mt-space-xxs font-semibold">OCEAN VOYAGES</span></a></div><nav class="hidden xl:flex items-center gap-space-xl" data-active-classes="text-primary border-b-2 border-primary font-semibold"><a aria-current="page" class="transition-colors py-space-xs text-primary border-b-2 border-primary font-semibold text-sm" data-path="destinations" href="#">Destinations</a><a class="font-label-md text-label-md text-slate-600 hover:text-text-obsidian transition-colors py-space-xs font-medium" data-path="the-fleet" href="#">The Fleet</a><a class="font-label-md text-label-md text-slate-600 hover:text-text-obsidian transition-colors py-space-xs font-medium" data-path="suites-and-penthouses" href="#">Suites &amp; Penthouses</a><a class="font-label-md text-label-md text-slate-600 hover:text-text-obsidian transition-colors py-space-xs font-medium" data-path="culinary-and-wellness" href="#">Culinary &amp; Wellness</a><a class="font-label-md text-label-md text-slate-600 hover:text-text-obsidian transition-colors py-space-xs font-medium" data-path="special-offers" href="#">Special Offers</a></nav><div class="flex items-center gap-space-md"><div class="hidden lg:flex items-center gap-space-xs px-space-md py-space-xs bg-[#f4efea] border border-[#dfcaa0]/60 rounded-full text-text-slate hover:border-primary transition-colors"><span class="material-symbols-outlined text-base text-primary">call</span><span class="font-label-caps text-label-caps tracking-widest text-text-obsidian font-semibold">+1 (800) AURELIA</span></div><a class="px-space-lg py-space-sm rounded-lg bg-gradient-to-r from-[#b8860b] via-[#d4af37] to-[#c59b27] text-white font-label-caps text-label-caps uppercase tracking-[0.14em] font-semibold shadow-[0_4px_16px_rgba(184,134,11,0.28)] hover:shadow-[0_6px_24px_rgba(184,134,11,0.4)] hover:-translate-y-[1px] transition-all whitespace-nowrap" data-path="reserve-voyage" href="#">Reserve Voyage</a><div class="flex items-center gap-space-xs pl-space-xs border-l border-[#dfcaa0]/60"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary/40 shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnXCor6gDSWGnGXVlNAC4_t7jrNpifKLN0SeRpZqE0DGR3yMefpliZTT_9fEG3eVi-rI9u2e0c6hIB0q1Oh0GPO20rUbEtvxMVNGYK-EOS6WDh6xqE69ihqlRqOTaBcHPzrl1zXRexqqzSFji9dMhUSavEBFkj4UqCG2kyPmcfKmBtwJvIXpBlKinpWhfUjzR_zu2qq0xYdcfQQAf5MLkyXMqBrdJ8FAfA0bfplOREQsWdUjvnW9ci"/><button class="xl:hidden p-space-xs text-text-slate hover:text-text-obsidian"><span class="material-symbols-outlined text-2xl">menu</span></button></div></div></div></header><main class="w-full pt-20 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- 1. HERO SECTION -->
+<section class="relative w-full min-h-[92vh] flex flex-col justify-between -mt-20 pt-28 pb-16 px-gutter-desktop overflow-hidden">
+<!-- Cinematic Background with Warm Luxury Scrim -->
+<div class="absolute inset-0 z-0">
+<img alt="Aurelia Superyacht cruising at golden dusk" class="w-full h-full object-cover object-center scale-105 transition-transform duration-1000 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoGwSSGieJzotWAA5cc3lSJ1BuClvX6E51l-UGnblaXvuaKsyenOF9YIhD4WHOwDDyOrnNI05iRuo65uufmSO5BpmdxNZkxNz-eYbOrSuo13EXmDcFbx8nIUampFZlFb32n5-QgU_tDAvJUJOWM7C0wrJtLLMejhj9iNByX5JgWa4TGFS8kaSHZiBVOnkb1Xmgk6_5z8YagGZRLfvhTku-DaW4OtnOiKcZiI-QwjZBYK5mSP5eHb2O"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#faf8f5] via-[#faf8f5]/65 to-[#faf8f5]/25"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-[#faf8f5]/90 via-[#faf8f5]/60 to-transparent"></div>
+</div>
+<!-- Top Editorial Header Text -->
+<div class="relative z-10 max-w-container-max mx-auto w-full pt-12">
+<div class="max-w-3xl space-y-space-md">
+<div class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-white/85 backdrop-blur-md border border-[#c59b27]/30 shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-caps text-label-caps text-primary tracking-[0.25em] uppercase font-semibold">The Pinnacle of Maritime Elegance • All-Inclusive Suite Expeditions</span>
+</div>
+<h1 class="font-display-hero text-display-hero text-text-obsidian tracking-tight leading-[1.08]">
+          Sail Beyond <span class="italic font-normal text-primary">Luxury</span>
+</h1>
+<p class="font-body-lg text-body-lg text-text-slate max-w-2xl font-light leading-relaxed">
+          Discover bespoke coastal journeys across Goa, Lakshadweep, Dubai, and the Mediterranean with Michelin-inspired culinary excellence, private zodiac excursions, and dedicated butler service.
+        </p>
+</div>
+</div>
+<!-- Floating Glassmorphic Multi-Tab Search & Booking Widget -->
+<div class="relative z-10 max-w-container-max mx-auto w-full mt-12">
+<div class="bg-white/95 backdrop-blur-2xl rounded-2xl p-space-md lg:p-space-lg shadow-[0_20px_50px_rgba(14,23,36,0.08)] border border-[#dfcaa0]/50">
+<!-- Booking Tabs -->
+<div class="flex items-center gap-space-xs pb-space-md mb-space-md border-b border-[#dfcaa0]/40 overflow-x-auto">
+<button class="tab-btn px-space-lg py-space-xs rounded-full font-label-caps text-label-caps uppercase tracking-wider transition-all duration-300 bg-[#f9f5ea] text-primary border border-primary/40 shadow-sm flex items-center gap-2 font-semibold" id="tab-voyages" onclick="switchTab('voyages')">
+<span class="material-symbols-outlined text-sm text-primary">sailing</span>
+            Ocean Voyages
+          </button>
+<button class="tab-btn px-space-lg py-space-xs rounded-full font-label-caps text-label-caps uppercase tracking-wider text-text-slate hover:text-text-obsidian hover:bg-[#faf8f5] transition-all duration-300 flex items-center gap-2 font-medium" id="tab-weekend" onclick="switchTab('weekend')">
+<span class="material-symbols-outlined text-sm">beach_access</span>
+            Weekend Getaways
+          </button>
+<button class="tab-btn px-space-lg py-space-xs rounded-full font-label-caps text-label-caps uppercase tracking-wider text-text-slate hover:text-text-obsidian hover:bg-[#faf8f5] transition-all duration-300 flex items-center gap-2 font-medium" id="tab-charter" onclick="switchTab('charter')">
+<span class="material-symbols-outlined text-sm">directions_boat</span>
+            Private Yacht Charters
+          </button>
+</div>
+<!-- Inputs Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-md items-end">
+<!-- Destination Field -->
+<div class="space-y-space-xxs flex-1">
+<label class="font-label-caps text-label-caps text-tertiary uppercase tracking-widest block flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-xs text-primary">explore</span> Destination &amp; Ports
+            </label>
+<div class="relative">
+<select class="w-full bg-[#faf8f5] text-text-obsidian border border-[#dfcaa0] rounded-lg px-space-md py-3 font-body-sm text-body-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary appearance-none cursor-pointer font-medium shadow-inner">
+<option value="lakshadweep">Lakshadweep Coral Atolls (Kavaratti &amp; Kadmat)</option>
+<option value="goa">Goa &amp; Konkan Coast (Sundowner Excursions)</option>
+<option value="dubai">Arabian Gulf &amp; Dubai (Royal Skyline Passage)</option>
+<option value="maldives">Maldives &amp; Sri Lanka Lagoon Odyssey</option>
+<option value="med">Mediterranean French &amp; Italian Riviera</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3.5 pointer-events-none text-slate-500 text-lg">arrow_drop_down</span>
+</div>
+</div>
+<!-- Sailing Date -->
+<div class="space-y-space-xxs flex-1">
+<label class="font-label-caps text-label-caps text-tertiary uppercase tracking-widest block flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-xs text-primary">calendar_month</span> Sailing Window
+            </label>
+<div class="relative">
+<input class="w-full bg-[#faf8f5] text-text-obsidian border border-[#dfcaa0] rounded-lg px-space-md py-3 font-body-sm text-body-sm focus:outline-none focus:border-primary cursor-pointer font-medium shadow-inner" readonly="" type="text" value="Oct 2025 – Jan 2026"/>
+<span class="material-symbols-outlined absolute right-3 top-3.5 pointer-events-none text-slate-500 text-lg">date_range</span>
+</div>
+</div>
+<!-- Duration -->
+<div class="space-y-space-xxs flex-1">
+<label class="font-label-caps text-label-caps text-tertiary uppercase tracking-widest block flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-xs text-primary">timelapse</span> Voyage Duration
+            </label>
+<div class="relative">
+<select class="w-full bg-[#faf8f5] text-text-obsidian border border-[#dfcaa0] rounded-lg px-space-md py-3 font-body-sm text-body-sm focus:outline-none focus:border-primary appearance-none cursor-pointer font-medium shadow-inner">
+<option value="all">Any Duration (3 - 14 Nights)</option>
+<option value="3">3 - 4 Nights (Coastal Weekend)</option>
+<option value="5">5 - 7 Nights (Signature Cruise)</option>
+<option value="10">8+ Nights (Grand Archipelagos)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3.5 pointer-events-none text-slate-500 text-lg">expand_more</span>
+</div>
+</div>
+<!-- Stateroom & Guests -->
+<div class="space-y-space-xxs flex-1">
+<label class="font-label-caps text-label-caps text-tertiary uppercase tracking-widest block flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-xs text-primary">bedroom_parent</span> Suite &amp; Party
+            </label>
+<div class="relative">
+<select class="w-full bg-[#faf8f5] text-text-obsidian border border-[#dfcaa0] rounded-lg px-space-md py-3 font-body-sm text-body-sm focus:outline-none focus:border-primary appearance-none cursor-pointer font-medium shadow-inner">
+<option value="2-ocean">2 Guests • Grand Ocean Balcony</option>
+<option value="2-penthouse">2 Guests • Horizon Penthouse Duplex</option>
+<option value="4-owner">4 Guests • Royal Aurelia Suite</option>
+<option value="1-solo">1 Guest • Private Veranda Studio</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3.5 pointer-events-none text-slate-500 text-lg">person</span>
+</div>
+</div>
+<!-- CTA Button -->
+<div class="flex items-end">
+<button class="w-full h-[46px] rounded-lg bg-gradient-to-r from-[#b8860b] via-[#d4af37] to-[#c59b27] text-white font-label-caps text-label-caps uppercase tracking-[0.16em] font-semibold shadow-[0_4px_16px_rgba(184,134,11,0.3)] hover:shadow-[0_6px_24px_rgba(184,134,11,0.45)] hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center gap-2">
+<span>Explore Voyages</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Quick Trust Ticker Below Search -->
+<div class="mt-space-md pt-space-sm border-t border-[#dfcaa0]/30 flex flex-wrap items-center justify-between gap-space-sm text-text-slate">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-base" style="font-variation-settings: 'FILL' 1;">hotel_class</span>
+<span class="font-body-sm text-body-sm font-medium">4.98 Guest Satisfaction (Verified Superyacht Index)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-base">balcony</span>
+<span class="font-body-sm text-body-sm font-medium">100% Ocean-View Private Balcony Suites</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-base">restaurant</span>
+<span class="font-body-sm text-body-sm font-medium">Complimentary 6-Venue Michelin Dining &amp; Cellar Pairings</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-base">room_service</span>
+<span class="font-body-sm text-body-sm font-medium">24-Hour Dedicated Stateroom Butler</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. DESTINATIONS GRID ("Curated Archipelagos & Pristine Waters") -->
+<section class="w-full py-space-4xl px-gutter-desktop max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-2xl gap-space-md">
+<div class="space-y-space-xs">
+<span class="font-label-caps text-label-caps text-primary tracking-[0.25em] uppercase font-semibold">CURATED ARCHIPELAGOS</span>
+<h2 class="font-headline-lg text-headline-lg text-text-obsidian">Destinations Defined by Distinction</h2>
+<p class="font-body-md text-body-md text-text-slate max-w-xl">From crystal atoll lagoons in Lakshadweep to sundowner heritage shores of Goa and glittering Arabian skylines.</p>
+</div>
+<!-- Destination Filters -->
+<div class="flex items-center gap-2 overflow-x-auto pb-2">
+<button class="px-4 py-2 rounded-full font-label-caps text-label-caps uppercase tracking-wider bg-primary text-white shadow-sm font-medium">All Voyages</button>
+<button class="px-4 py-2 rounded-full font-label-caps text-label-caps uppercase tracking-wider text-text-slate bg-white border border-[#dfcaa0]/60 hover:text-text-obsidian hover:border-primary transition-colors font-medium">Arabian Sea</button>
+<button class="px-4 py-2 rounded-full font-label-caps text-label-caps uppercase tracking-wider text-text-slate bg-white border border-[#dfcaa0]/60 hover:text-text-obsidian hover:border-primary transition-colors font-medium">Indian Ocean</button>
+<button class="px-4 py-2 rounded-full font-label-caps text-label-caps uppercase tracking-wider text-text-slate bg-white border border-[#dfcaa0]/60 hover:text-text-obsidian hover:border-primary transition-colors font-medium">International</button>
+</div>
+</div>
+<!-- Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg">
+<!-- Card 1 -->
+<div class="group bg-white rounded-xl overflow-hidden border border-[#dfcaa0]/50 hover:border-primary/60 transition-all duration-500 hover:-translate-y-1.5 shadow-[0_10px_30px_rgba(0,0,0,0.04)] flex flex-col justify-between">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out" data-alt="Pristine aerial view of turquoise ocean lagoon and coral reefs in Lakshadweep with a white luxury expedition yacht anchored on deep sapphire waters under radiant tropical golden hour light, cinematic 8k ultra high resolution." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDND4ns1mXctRCw8hUwYIR2Ngr-m-VSyGBe9c8Gq7BhiiFvV0-3VtHds0XJmvvVz0TMPuOJgFGE1cxfaSTBBtm-Uqj2ApVFVP-59GDvbw0uWQlgcliDnSuck4WtVYQ_1C-BY0d-pB-9-tJ37DdhuoK8tkkatl2QCpUZnNX-GqU0lGo6G1xxuCHHuxqQLJLlJhP_FHTgFqHGLPr5-VXcarrR1ILbyBePQ-I7DG7q7bkvyLOsoYfrXpUd"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20"></div>
+<span class="absolute top-3 left-3 bg-white/90 backdrop-blur-md text-primary font-label-caps text-label-caps uppercase tracking-wider px-3 py-1 rounded-full border border-primary/30 font-semibold shadow-sm">
+            Exclusive Access
+          </span>
+<span class="absolute bottom-3 right-3 bg-white/90 backdrop-blur-md text-text-obsidian font-body-sm text-body-sm px-2.5 py-1 rounded-md font-semibold shadow-sm">
+            5 Nights / 6 Days
+          </span>
+</div>
+<div class="p-space-lg flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-1 text-primary font-label-caps text-label-caps tracking-widest uppercase mb-1 font-semibold">
+<span class="material-symbols-outlined text-xs">location_on</span> Coral Atolls
+            </div>
+<h3 class="font-headline-sm text-headline-sm text-text-obsidian group-hover:text-primary transition-colors">Lakshadweep Atoll Sanctuary</h3>
+<p class="font-body-sm text-body-sm text-text-slate mt-2 line-clamp-2">
+              Remote anchorages in Kadmat and Kavaratti, bespoke scuba reef safaris, and uninhabited private sandbank dinners.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-md border-t border-[#dfcaa0]/30 flex items-center justify-between">
+<div>
+<span class="font-label-caps text-label-caps text-slate-500 block uppercase tracking-wider">From</span>
+<span class="font-title-editorial text-title-editorial text-primary font-bold">$1,850 <span class="font-body-sm text-body-sm text-slate-500 font-normal">/ guest</span></span>
+</div>
+<a class="px-3.5 py-2 rounded-lg bg-[#faf8f5] hover:bg-primary hover:text-white font-label-caps text-label-caps uppercase tracking-wider transition-colors flex items-center gap-1 text-text-obsidian border border-[#dfcaa0]/40 font-semibold" href="#">
+<span>View Itinerary</span>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group bg-white rounded-xl overflow-hidden border border-[#dfcaa0]/50 hover:border-primary/60 transition-all duration-500 hover:-translate-y-1.5 shadow-[0_10px_30px_rgba(0,0,0,0.04)] flex flex-col justify-between">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out" data-alt="Coastline of Goa at sunset with colonial Portuguese architecture villas on cliffs, golden sun setting over the calm Arabian Sea, gentle warm breeze, silhouetted luxury mega yacht cruising the bay." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJUoA_CKQM9zrR1KcEyRhzphlzLMF_kuRSGR4KE5f23P8qmElRTQxMfHl36iYbxLsTF0m0I3s1To0XhnigjN0thi1tJ9y7C6hya3XMyDzaTOPhjv2jfEWP4Wbm9kz_FmXMh-rlR7gBXv1kwp3NXZ7qdsistbI1q4OzgqhRCkE6rWAbOEKanIkmNEs2O9h-Ld6m6N7JLma_S0f3Ys1nCtxSWLe8ThtOhqoV2kIw1Zc_Qg7HKrEasJIt"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20"></div>
+<span class="absolute top-3 left-3 bg-white/90 backdrop-blur-md text-primary font-label-caps text-label-caps uppercase tracking-wider px-3 py-1 rounded-full border border-primary/30 font-semibold shadow-sm">
+            Weekend Retreat
+          </span>
+<span class="absolute bottom-3 right-3 bg-white/90 backdrop-blur-md text-text-obsidian font-body-sm text-body-sm px-2.5 py-1 rounded-md font-semibold shadow-sm">
+            3 Nights / 4 Days
+          </span>
+</div>
+<div class="p-space-lg flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-1 text-primary font-label-caps text-label-caps tracking-widest uppercase mb-1 font-semibold">
+<span class="material-symbols-outlined text-xs">location_on</span> Konkan Coastline
+            </div>
+<h3 class="font-headline-sm text-headline-sm text-text-obsidian group-hover:text-primary transition-colors">Goa &amp; Sundowner Coast</h3>
+<p class="font-body-sm text-body-sm text-text-slate mt-2 line-clamp-2">
+              Private beach club anchorage at Morjim, curated spice estate tastings, and sunset champagne jazz on the aft deck.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-md border-t border-[#dfcaa0]/30 flex items-center justify-between">
+<div>
+<span class="font-label-caps text-label-caps text-slate-500 block uppercase tracking-wider">From</span>
+<span class="font-title-editorial text-title-editorial text-primary font-bold">$1,200 <span class="font-body-sm text-body-sm text-slate-500 font-normal">/ guest</span></span>
+</div>
+<a class="px-3.5 py-2 rounded-lg bg-[#faf8f5] hover:bg-primary hover:text-white font-label-caps text-label-caps uppercase tracking-wider transition-colors flex items-center gap-1 text-text-obsidian border border-[#dfcaa0]/40 font-semibold" href="#">
+<span>View Itinerary</span>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group bg-white rounded-xl overflow-hidden border border-[#dfcaa0]/50 hover:border-primary/60 transition-all duration-500 hover:-translate-y-1.5 shadow-[0_10px_30px_rgba(0,0,0,0.04)] flex flex-col justify-between">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out" data-alt="Dubai glittering skyline Marina and Burj Al Arab at twilight viewed from the aft deck of a grand luxury ocean liner with warm ambient deck lighting and calm deep ocean waves in foreground." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXhWXTTxIX6O4KPhH-N2CuJ_4vSjob090Es-J64hiAfpTDgKXKufvwwBJ-pJHZP7JctMHibpb7mODKCnBZPXZb7Ywtmpnrg9GX-vrh8wjeGQ5BDNh6i47gSzpRMCGwI9R7ggyypSmZbtgYTj3BwKU3nHRPgkqjAOaHAbf56PzvYzPRxUYkjGMXelIubCb2ilWE8yXEADe6OMM_G__--HjlMxm50ZyejRV2ZA8ynW7Xem3s9q41B17-"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20"></div>
+<span class="absolute top-3 left-3 bg-white/90 backdrop-blur-md text-primary font-label-caps text-label-caps uppercase tracking-wider px-3 py-1 rounded-full border border-primary/30 font-semibold shadow-sm">
+            Signature Grand Voyage
+          </span>
+<span class="absolute bottom-3 right-3 bg-white/90 backdrop-blur-md text-text-obsidian font-body-sm text-body-sm px-2.5 py-1 rounded-md font-semibold shadow-sm">
+            7 Nights / 8 Days
+          </span>
+</div>
+<div class="p-space-lg flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-1 text-primary font-label-caps text-label-caps tracking-widest uppercase mb-1 font-semibold">
+<span class="material-symbols-outlined text-xs">location_on</span> Arabian Gulf
+            </div>
+<h3 class="font-headline-sm text-headline-sm text-text-obsidian group-hover:text-primary transition-colors">Dubai to Mumbai Royal Passage</h3>
+<p class="font-body-sm text-body-sm text-text-slate mt-2 line-clamp-2">
+              Cross the historic spice routes from futuristic Emirati skylines to Muscat fjords and Mumbai's iconic colonial Gateway.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-md border-t border-[#dfcaa0]/30 flex items-center justify-between">
+<div>
+<span class="font-label-caps text-label-caps text-slate-500 block uppercase tracking-wider">From</span>
+<span class="font-title-editorial text-title-editorial text-primary font-bold">$3,450 <span class="font-body-sm text-body-sm text-slate-500 font-normal">/ guest</span></span>
+</div>
+<a class="px-3.5 py-2 rounded-lg bg-[#faf8f5] hover:bg-primary hover:text-white font-label-caps text-label-caps uppercase tracking-wider transition-colors flex items-center gap-1 text-text-obsidian border border-[#dfcaa0]/40 font-semibold" href="#">
+<span>View Itinerary</span>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="group bg-white rounded-xl overflow-hidden border border-[#dfcaa0]/50 hover:border-primary/60 transition-all duration-500 hover:-translate-y-1.5 shadow-[0_10px_30px_rgba(0,0,0,0.04)] flex flex-col justify-between">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out" data-alt="Exotic Maldives tropical atoll with overwater bungalows and luminous bioluminescent turquoise night waters, luxury mega yacht resting peacefully under a canopy of stars in the Indian Ocean." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAa89_N_1J-_fO5Uvw-N9O8aOLI1N3MceLDXoyd2gTb3A6RhbyFai_rheglRciUenFjS-lEEP-t8iLjrLTGAuVZzvAcY3WTcib-QW8P58zAFyWp76zgCiC0ctCQscHGgYsH0zuxOYI78Yg-M-lG17UUqiM8VHUKSKk1RZIsL1jvOfDO58gRiO6nwiiMfnIn9dE59TAEpnEoC2bkvhBAbRLV2efKeQW1KivnYuwgoWapwu6MIFOI_vk0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20"></div>
+<span class="absolute top-3 left-3 bg-white/90 backdrop-blur-md text-primary font-label-caps text-label-caps uppercase tracking-wider px-3 py-1 rounded-full border border-primary/30 font-semibold shadow-sm">
+            Ultra All-Inclusive
+          </span>
+<span class="absolute bottom-3 right-3 bg-white/90 backdrop-blur-md text-text-obsidian font-body-sm text-body-sm px-2.5 py-1 rounded-md font-semibold shadow-sm">
+            8 Nights / 9 Days
+          </span>
+</div>
+<div class="p-space-lg flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-1 text-primary font-label-caps text-label-caps tracking-widest uppercase mb-1 font-semibold">
+<span class="material-symbols-outlined text-xs">location_on</span> Indian Ocean
+            </div>
+<h3 class="font-headline-sm text-headline-sm text-text-obsidian group-hover:text-primary transition-colors">Sri Lanka &amp; Maldives Odyssey</h3>
+<p class="font-body-sm text-body-sm text-text-slate mt-2 line-clamp-2">
+              Whale sanctuaries in Mirissa, secluded Maldivian sandbars, private chef reef dining, and starlit open-air cinema.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-md border-t border-[#dfcaa0]/30 flex items-center justify-between">
+<div>
+<span class="font-label-caps text-label-caps text-slate-500 block uppercase tracking-wider">From</span>
+<span class="font-title-editorial text-title-editorial text-primary font-bold">$4,200 <span class="font-body-sm text-body-sm text-slate-500 font-normal">/ guest</span></span>
+</div>
+<a class="px-3.5 py-2 rounded-lg bg-[#faf8f5] hover:bg-primary hover:text-white font-label-caps text-label-caps uppercase tracking-wider transition-colors flex items-center gap-1 text-text-obsidian border border-[#dfcaa0]/40 font-semibold" href="#">
+<span>View Itinerary</span>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. FEATURED SHIP EXPERIENCE ("Life Aboard the Aurelia Flagship") -->
+<section class="w-full py-space-4xl bg-[#f4efea] relative overflow-hidden border-y border-[#dfcaa0]/40">
+<div class="max-w-container-max mx-auto px-gutter-desktop">
+<div class="text-center max-w-3xl mx-auto space-y-space-xs mb-space-3xl">
+<span class="font-label-caps text-label-caps text-primary tracking-[0.25em] uppercase font-semibold">NOCTURNAL SPLENDOR</span>
+<h2 class="font-headline-lg text-headline-lg text-text-obsidian">Life Aboard Aurelia Flagship</h2>
+<p class="font-body-lg text-body-lg text-text-slate font-light">
+          An opulent world engineered for connoisseurs of the rare and timeless. Revel in six-star maritime sanctuaries curated by masters of fine living.
+        </p>
+</div>
+<!-- Experience Bento Showcase -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Feature 1: Haute Gastronomie (Large 7 col) -->
+<div class="lg:col-span-7 bg-white rounded-2xl overflow-hidden border border-[#dfcaa0]/60 hover:border-primary/60 transition-all duration-300 relative group min-h-[420px] flex flex-col justify-end p-space-xl shadow-[0_10px_30px_rgba(0,0,0,0.05)]">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="Intimate Michelin-star caliber fine dining restaurant aboard a luxury mega yacht at sea with warm candlelight, crystal stemware, dark mahogany and brass accents, ocean horizon visible through floor-to-ceiling glass windows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhNAtuBc51yQWYHH1b8FuxRWwqz6FNmG6miJDmtsFwu6kORkjwLvke9xB6fjw0eXUt819Qb4Kg3-Wk1S2Lu4s6-D6llFez67dNPpT91Ofw97MCfuYyi-M3dPcwlLX-9G4WhO6Co6v4qV5BtRiWbZbQK82CiAJ7zrcqV49IbnGqKTVC5boD5bS0fljjxNc2oRmxCEM_OCYlhqHuU0U6y8KYhTI10YOEMKZRPfnbXUMV746xtiuS0kXz"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-transparent"></div>
+</div>
+<div class="relative z-10 space-y-space-xs max-w-xl">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-amber-300 text-xl">restaurant_menu</span>
+<span class="font-label-caps text-label-caps text-amber-300 uppercase tracking-[0.2em] font-semibold">Gastronomic Atelier • Deck 6</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-white">Six Masterchef Specialty Venues</h3>
+<p class="font-body-md text-body-md text-slate-200">
+              From charcoal-grilled Wagyu at L’Ambre to fresh yellowfin carpaccio curated by 3-Michelin star resident chefs, accompanied by rare vintages from our 2,400-bottle oceanic cellar.
+            </p>
+<div class="pt-space-xs flex items-center gap-space-lg text-white font-label-caps text-label-caps uppercase font-semibold">
+<span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-amber-400"></span> Caviar &amp; Krug Bar</span>
+<span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-amber-400"></span> Sommelier Masterclasses</span>
+</div>
+</div>
+</div>
+<!-- Feature 2: Grand Casino Royale (5 col) -->
+<div class="lg:col-span-5 bg-white rounded-2xl overflow-hidden border border-[#dfcaa0]/60 hover:border-primary/60 transition-all duration-300 relative group min-h-[420px] flex flex-col justify-end p-space-xl shadow-[0_10px_30px_rgba(0,0,0,0.05)]">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="Exclusive VIP high stakes casino salon on private yacht with velvet roulette table, crystal chandeliers, dark mood lighting, players in elegant black-tie attire sipping cognac." src="https://lh3.googleusercontent.com/aida-public/AB6AXuApYmzQXsXOqSsWZkfsKXWD-38ww8098eOW_IJoT96V8hXqZqja_StyCt2oK9x4l1Jt2AbXGos1bNPWzIjlmqBedpZ2JkzIcZqPF-WeyXs9ih3C2Gt1FvQI5R2XPK1W6pO3uOQAOarksf1Bgb2UTX4FPgPTNg5sgA_K17xzueaR3oQTJw7hmNHs4OxZTSgF0EOqCHGtyk6cmvLYprNYSv7g6-K4gsqJGFFGqVyzkPTn5D3KqUt6IY8e"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-transparent"></div>
+</div>
+<div class="relative z-10 space-y-space-xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-amber-300 text-xl">poker_chip</span>
+<span class="font-label-caps text-label-caps text-amber-300 uppercase tracking-[0.2em] font-semibold">Monaco Gaming Club • Deck 7</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-white">The Grand Casino Royale</h3>
+<p class="font-body-sm text-body-sm text-slate-200">
+              Private Salon Privé high-limit tables, European roulette, and bespoke hand-crafted mixology under chandelier warmth.
+            </p>
+</div>
+</div>
+<!-- Feature 3: Aurum Thalasso Spa (5 col) -->
+<div class="lg:col-span-5 bg-white rounded-2xl overflow-hidden border border-[#dfcaa0]/60 hover:border-primary/60 transition-all duration-300 relative group min-h-[400px] flex flex-col justify-end p-space-xl shadow-[0_10px_30px_rgba(0,0,0,0.05)]">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="Serene luxury thermal spa vitality pool overlooking the ocean through floor to ceiling glass at twilight, warm steam rising, stone loungers, golden indirect wellness lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyRbQqXRp_OjT0sm5BTq9eQzUAsskiEtDrrPTHu9-V_IgySTWOnG7EAVQ5x_prZWXQfyCCnPAbtDZxRNxnYLapko2vBI_wVc1mrIS7THiXzCacIs9EwEI_EFfm2EPhuX7HKlUJ1MsbLix8CTU1KAYWMY_inywZRdAtaFSe-o5awmIx2ud_j2CNyOmCKYoxv2fCfhi9hCMVh6WoUrNP38kqQfbEWnqW9yBGvHKNQ26NZqm8saDvSioA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-transparent"></div>
+</div>
+<div class="relative z-10 space-y-space-xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-amber-300 text-xl">spa</span>
+<span class="font-label-caps text-label-caps text-amber-300 uppercase tracking-[0.2em] font-semibold">Holistic Wellness • Deck 9</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-white">Aurum Thalasso Spa &amp; Vitality</h3>
+<p class="font-body-sm text-body-sm text-slate-200">
+              Hydrotherapy magnesium pools, Finnish ocean-view cedar saunas, and anti-aging cell rituals by Valmont Switzerland.
+            </p>
+</div>
+</div>
+<!-- Feature 4: Amphitheater Theatre (7 col) -->
+<div class="lg:col-span-7 bg-white rounded-2xl overflow-hidden border border-[#dfcaa0]/60 hover:border-primary/60 transition-all duration-300 relative group min-h-[400px] flex flex-col justify-end p-space-xl shadow-[0_10px_30px_rgba(0,0,0,0.05)]">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="Spectacular multi-tier cruise theater auditorium with illuminated grand stage, golden ambient wall sconces, luxury velvet tiered box seating, and live acoustic orchestra performing." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkMfWnY0OvHk5gb4XZyOSR03CFX-ouxLbsWa6I0xbRyyb2JkN0erH7vx0bycxJA3yDP85B6jhdM53K0TJZ7sKgf_ccCSibSlz8SJQIbqlFggsOJ6oBEca0WwHEaPjnw1unMErHJBFC-woeupllXll2sJr9IzU1Xo2BXEjeiWh9KzfqOHl_OaF6-BLEL8MZCGXN5OYgKK9LjU5MWdf6HKh_jcqBBss7uL4DD5Nr9S9zxVWlGZYOZm-o"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-transparent"></div>
+</div>
+<div class="relative z-10 space-y-space-xs max-w-xl">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-amber-300 text-xl">theater_comedy</span>
+<span class="font-label-caps text-label-caps text-amber-300 uppercase tracking-[0.2em] font-semibold">The Stage • Deck 4 &amp; 5</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-white">Broadway-Caliber Grand Theatre</h3>
+<p class="font-body-md text-body-md text-slate-200">
+              Two-tier crystal acoustic arena with exclusive West End productions, international virtuoso soloists, and starlit jazz recitals.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. POPULAR PACKAGES & STATEROOM SUITE PRICING -->
+<section class="w-full py-space-4xl px-gutter-desktop max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-2xl gap-space-md">
+<div class="space-y-space-xs">
+<span class="font-label-caps text-label-caps text-primary tracking-[0.25em] uppercase font-semibold">BESPOKE STATEROOMS</span>
+<h2 class="font-headline-lg text-headline-lg text-text-obsidian">Select Your All-Inclusive Residence</h2>
+<p class="font-body-md text-body-md text-text-slate max-w-xl">
+          Every stateroom aboard Aurelia is an expansive, private terrace suite facing the infinite horizon with dedicated butler assistance.
+        </p>
+</div>
+<!-- Duration Segmented Switch -->
+<div class="inline-flex p-1 bg-[#f4efea] rounded-lg border border-[#dfcaa0]/50 shadow-inner">
+<button class="px-4 py-1.5 rounded-md font-label-caps text-label-caps uppercase tracking-wider text-text-slate hover:text-text-obsidian transition-colors font-medium">3-Night Escapes</button>
+<button class="px-4 py-1.5 rounded-md font-label-caps text-label-caps uppercase tracking-wider bg-primary text-white font-semibold shadow">5-Night Journeys</button>
+<button class="px-4 py-1.5 rounded-md font-label-caps text-label-caps uppercase tracking-wider text-text-slate hover:text-text-obsidian transition-colors font-medium">7+ Nights Grand</button>
+</div>
+</div>
+<!-- 3 Tier Cards -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-xl items-stretch">
+<!-- Tier 1: Deluxe Ocean Balcony -->
+<div class="bg-white rounded-2xl p-space-xl border border-[#dfcaa0]/50 hover:border-primary/60 transition-all duration-300 flex flex-col justify-between shadow-[0_10px_30px_rgba(0,0,0,0.04)]">
+<div>
+<div class="flex items-center justify-between pb-space-sm border-b border-[#dfcaa0]/30">
+<span class="font-label-caps text-label-caps text-primary uppercase tracking-wider font-semibold">Level I Residence</span>
+<span class="font-body-sm text-body-sm text-text-slate">350 sq.ft • Veranda</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-text-obsidian mt-space-md font-medium">Deluxe Ocean Balcony Suite</h3>
+<p class="font-body-sm text-body-sm text-text-slate mt-2">
+            Teak-decked private terrace, marble bath with rainfall shower, Dyson amenities, and 300-thread-count Egyptian linens.
+          </p>
+<div class="mt-space-lg mb-space-lg">
+<span class="font-display-hero text-headline-lg text-primary font-bold leading-none">$1,450</span>
+<span class="font-body-sm text-body-sm text-text-slate"> / suite per night</span>
+</div>
+<!-- Feature List -->
+<ul class="space-y-space-xs font-body-sm text-body-sm text-text-slate pt-space-md border-t border-[#dfcaa0]/30">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-base">check_circle</span>
+<span>Unlimited Dining at all 6 specialty venues</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-base">check_circle</span>
+<span>Sommelier-selected fine wine &amp; spirits</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-base">check_circle</span>
+<span>Ultra-fast Starlink Maritime WiFi</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-base">check_circle</span>
+<span>Shared zodiac shore landings</span>
+</li>
+<li class="flex items-center gap-2 opacity-40">
+<span class="material-symbols-outlined text-base">close</span>
+<span>24/7 Dedicated Private Butler</span>
+</li>
+</ul>
+</div>
+<div class="mt-space-2xl">
+<button class="w-full py-3 rounded-lg border border-primary text-primary hover:bg-primary hover:text-white font-label-caps text-label-caps uppercase tracking-widest transition-all font-semibold">
+            Reserve Balcony Suite
+          </button>
+</div>
+</div>
+<!-- Tier 2: Signature Horizon Penthouse (Featured) -->
+<div class="bg-white relative rounded-2xl p-space-xl border-2 border-primary shadow-[0_14px_40px_rgba(184,134,11,0.18)] flex flex-col justify-between transform lg:-translate-y-2">
+<div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-[#b8860b] via-[#d4af37] to-[#c59b27] text-white px-4 py-1 rounded-full font-label-caps text-label-caps uppercase tracking-widest font-bold shadow-md text-xs">
+          Most Favored Residence
+        </div>
+<div>
+<div class="flex items-center justify-between pb-space-sm border-b border-[#dfcaa0]/40 mt-2">
+<span class="font-label-caps text-label-caps text-primary uppercase tracking-wider font-semibold">Level II Penthouse</span>
+<span class="font-body-sm text-body-sm text-text-slate font-medium">750 sq.ft • Duplex Terrace</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-text-obsidian mt-space-md font-medium">Signature Horizon Penthouse</h3>
+<p class="font-body-sm text-body-sm text-text-slate mt-2">
+            Expansive open-plan living salon, outdoor daybeds, dual walk-in closets, bespoke minibar restocked daily, and Hermès amenities.
+          </p>
+<div class="mt-space-lg mb-space-lg">
+<span class="font-display-hero text-headline-lg text-primary font-bold leading-none">$2,850</span>
+<span class="font-body-sm text-body-sm text-text-slate"> / suite per night</span>
+</div>
+<!-- Feature List -->
+<ul class="space-y-space-xs font-body-sm text-body-sm text-text-obsidian pt-space-md border-t border-[#dfcaa0]/40 font-medium">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-base">check_circle</span>
+<span class="font-semibold">24/7 Dedicated Private Butler Service</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-base">check_circle</span>
+<span>Priority Zodiac &amp; Shore Expedition Tenders</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-base">check_circle</span>
+<span>Unlimited Krug &amp; Dom Pérignon Champagne</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-base">check_circle</span>
+<span>$500 Aurum Spa Credit per sailing</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-base">check_circle</span>
+<span>Private Airport &amp; Port Chauffeur Transfer</span>
+</li>
+</ul>
+</div>
+<div class="mt-space-2xl">
+<button class="w-full py-3.5 rounded-lg bg-gradient-to-r from-[#b8860b] via-[#d4af37] to-[#c59b27] text-white font-label-caps text-label-caps uppercase tracking-widest font-semibold shadow-md hover:shadow-[0_4px_20px_rgba(184,134,11,0.4)] transition-all">
+            Reserve Horizon Penthouse
+          </button>
+</div>
+</div>
+<!-- Tier 3: The Royal Aurelia Owner’s Suite -->
+<div class="bg-white rounded-2xl p-space-xl border border-[#dfcaa0]/50 hover:border-primary/60 transition-all duration-300 flex flex-col justify-between shadow-[0_10px_30px_rgba(0,0,0,0.04)]">
+<div>
+<div class="flex items-center justify-between pb-space-sm border-b border-[#dfcaa0]/30">
+<span class="font-label-caps text-label-caps text-primary uppercase tracking-wider font-semibold">The Sovereign Estate</span>
+<span class="font-body-sm text-body-sm text-text-slate">1,600 sq.ft • Wrap Jacuzzi</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-text-obsidian mt-space-md font-medium">The Royal Aurelia Owner’s Suite</h3>
+<p class="font-body-sm text-body-sm text-text-slate mt-2">
+            Commanding bridge-view bow stateroom, private heated hydrotherapy pool, grand dining table for 8, and dedicated security salon.
+          </p>
+<div class="mt-space-lg mb-space-lg">
+<span class="font-display-hero text-headline-lg text-primary font-bold leading-none">$5,500</span>
+<span class="font-body-sm text-body-sm text-text-slate"> / suite per night</span>
+</div>
+<!-- Feature List -->
+<ul class="space-y-space-xs font-body-sm text-body-sm text-text-slate pt-space-md border-t border-[#dfcaa0]/30">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-base">check_circle</span>
+<span class="text-text-obsidian font-semibold">Private Helicopter Deck Transfer to Ship</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-base">check_circle</span>
+<span class="text-text-obsidian font-semibold">In-Suite Personal Master Chef &amp; Butler Team</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-base">check_circle</span>
+<span>Unrestricted Private Shore Excursions with Limousine</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-base">check_circle</span>
+<span>Unlimited Daily Spa Treatments</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-base">check_circle</span>
+<span>Bespoke Itinerary &amp; Private Anchorages</span>
+</li>
+</ul>
+</div>
+<div class="mt-space-2xl">
+<button class="w-full py-3 rounded-lg border border-primary text-primary hover:bg-primary hover:text-white font-label-caps text-label-caps uppercase tracking-widest transition-all font-semibold">
+            Inquire Sovereign Suite
+          </button>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. TRUST, SAFETY & LUXURY REASSURANCE -->
+<section class="w-full py-space-3xl bg-[#f4efea] border-y border-[#dfcaa0]/40">
+<div class="max-w-container-max mx-auto px-gutter-desktop">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-xl">
+<!-- Item 1 -->
+<div class="space-y-space-xs">
+<div class="w-12 h-12 rounded-xl bg-white border border-[#dfcaa0] flex items-center justify-center text-primary mb-space-sm shadow-sm">
+<span class="material-symbols-outlined text-2xl">waves</span>
+</div>
+<h4 class="font-title-editorial text-title-editorial text-text-obsidian font-semibold">Zero-Motion Gyro Hydrofoils</h4>
+<p class="font-body-sm text-body-sm text-text-slate">
+            Equipped with state-of-the-art Rolls-Royce active dynamic fins for imperceptible water motion across open oceans.
+          </p>
+</div>
+<!-- Item 2 -->
+<div class="space-y-space-xs">
+<div class="w-12 h-12 rounded-xl bg-white border border-[#dfcaa0] flex items-center justify-center text-primary mb-space-sm shadow-sm">
+<span class="material-symbols-outlined text-2xl">groups_3</span>
+</div>
+<h4 class="font-title-editorial text-title-editorial text-text-obsidian font-semibold">1 : 1.2 Host to Guest Ratio</h4>
+<p class="font-body-sm text-body-sm text-text-slate">
+            Unrivaled maritime staffing delivers intuitive, whisper-quiet service anticipating your desires without imposition.
+          </p>
+</div>
+<!-- Item 3 -->
+<div class="space-y-space-xs">
+<div class="w-12 h-12 rounded-xl bg-white border border-[#dfcaa0] flex items-center justify-center text-primary mb-space-sm shadow-sm">
+<span class="material-symbols-outlined text-2xl">verified</span>
+</div>
+<h4 class="font-title-editorial text-title-editorial text-text-obsidian font-semibold">All-Inclusive Purity</h4>
+<p class="font-body-sm text-body-sm text-text-slate">
+            No surprise port levies, no dining surcharges, no gratuity envelopes. True uncompromised peace of mind from embarkation.
+          </p>
+</div>
+<!-- Item 4 -->
+<div class="space-y-space-xs">
+<div class="w-12 h-12 rounded-xl bg-white border border-[#dfcaa0] flex items-center justify-center text-primary mb-space-sm shadow-sm">
+<span class="material-symbols-outlined text-2xl">support_agent</span>
+</div>
+<h4 class="font-title-editorial text-title-editorial text-text-obsidian font-semibold">24/7 Sovereign Concierge</h4>
+<p class="font-body-sm text-body-sm text-text-slate">
+            Direct access to dedicated travel curators before, during, and after your expedition for seamless transitions.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. GUEST TESTIMONIALS & PRESS EDITORIAL -->
+<section class="w-full py-space-4xl px-gutter-desktop max-w-container-max mx-auto">
+<div class="text-center max-w-2xl mx-auto mb-space-3xl space-y-space-xs">
+<span class="font-label-caps text-label-caps text-primary tracking-[0.25em] uppercase font-semibold">CRITICAL ACCLAIM</span>
+<h2 class="font-headline-lg text-headline-lg text-text-obsidian">A Symphony of Praise</h2>
+<p class="font-body-md text-body-md text-text-slate">Words from the global press and private voyagers.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<!-- Quote 1 -->
+<div class="bg-white p-space-xl rounded-2xl border border-[#dfcaa0]/50 flex flex-col justify-between shadow-[0_10px_30px_rgba(0,0,0,0.04)]">
+<div class="space-y-space-md">
+<div class="text-primary flex gap-1">
+<span class="material-symbols-outlined text-sm text-[#b8860b]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-[#b8860b]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-[#b8860b]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-[#b8860b]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-[#b8860b]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<blockquote class="font-body-lg text-body-lg text-text-obsidian font-light italic leading-relaxed">
+            “Aurelia redefines nautical hospitality. The Lakshadweep passage felt less like a cruise and more like an intimate grand yacht charter with Michelin-pedigree dining at every single meal.”
+          </blockquote>
+</div>
+<div class="pt-space-lg mt-space-lg border-t border-[#dfcaa0]/30">
+<p class="font-title-editorial text-title-editorial text-text-obsidian font-semibold">Condé Nast Traveler</p>
+<span class="font-label-caps text-label-caps text-primary uppercase tracking-wider font-semibold">Gold List 2025 Best Maritime Experience</span>
+</div>
+</div>
+<!-- Quote 2 -->
+<div class="bg-white p-space-xl rounded-2xl border border-[#dfcaa0]/50 flex flex-col justify-between shadow-[0_10px_30px_rgba(0,0,0,0.04)]">
+<div class="space-y-space-md">
+<div class="text-primary flex gap-1">
+<span class="material-symbols-outlined text-sm text-[#b8860b]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-[#b8860b]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-[#b8860b]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-[#b8860b]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-[#b8860b]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<blockquote class="font-body-lg text-body-lg text-text-obsidian font-light italic leading-relaxed">
+            “From the zero-noise stabilization to the private butler service who arranged our secluded sunset sandbank in Kadmat, Aurelia is without peer in the Indian Ocean.”
+          </blockquote>
+</div>
+<div class="pt-space-lg mt-space-lg border-t border-[#dfcaa0]/30">
+<p class="font-title-editorial text-title-editorial text-text-obsidian font-semibold">Sir David &amp; Lady Sterling</p>
+<span class="font-label-caps text-label-caps text-primary uppercase tracking-wider font-semibold">Horizon Penthouse • Mumbai-Dubai Voyage</span>
+</div>
+</div>
+<!-- Quote 3 -->
+<div class="bg-white p-space-xl rounded-2xl border border-[#dfcaa0]/50 flex flex-col justify-between shadow-[0_10px_30px_rgba(0,0,0,0.04)]">
+<div class="space-y-space-md">
+<div class="text-primary flex gap-1">
+<span class="material-symbols-outlined text-sm text-[#b8860b]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-[#b8860b]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-[#b8860b]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-[#b8860b]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-[#b8860b]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<blockquote class="font-body-lg text-body-lg text-text-obsidian font-light italic leading-relaxed">
+            “The quiet luxury design aesthetic—midnight wood, brushed brass, and vast sea view glazing—sets the benchmark for modern expedition vessels.”
+          </blockquote>
+</div>
+<div class="pt-space-lg mt-space-lg border-t border-[#dfcaa0]/30">
+<p class="font-title-editorial text-title-editorial text-text-obsidian font-semibold">Robb Report</p>
+<span class="font-label-caps text-label-caps text-primary uppercase tracking-wider font-semibold">Superyacht Design of the Year</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. NEWSLETTER & VIP CONCIERGE INVITATION -->
+<section class="w-full pb-space-4xl px-gutter-desktop max-w-container-max mx-auto">
+<div class="relative bg-gradient-to-br from-[#faf8f5] via-[#f4efea] to-[#ece6dc] rounded-3xl p-space-2xl md:p-space-3xl border border-[#dfcaa0] shadow-[0_20px_50px_rgba(14,23,36,0.06)] overflow-hidden">
+<!-- Decorative gold aura -->
+<div class="absolute -right-24 -bottom-24 w-96 h-96 rounded-full bg-primary/10 blur-3xl pointer-events-none"></div>
+<div class="relative z-10 max-w-3xl space-y-space-md">
+<span class="font-label-caps text-label-caps text-primary tracking-[0.28em] uppercase font-semibold">PRIVATE INVITATION ONLY</span>
+<h2 class="font-headline-lg text-headline-lg text-text-obsidian leading-tight">
+          Join the Aurelia Sovereign Society
+        </h2>
+<p class="font-body-md text-body-md text-text-slate max-w-xl">
+          Receive advance notice of unlisted maiden voyages, private archipelago charters, and invitations to exclusive wine tastings hosted by world master sommeliers.
+        </p>
+<form class="flex flex-col sm:flex-row gap-3 pt-space-sm max-w-lg" onsubmit="event.preventDefault(); alert('Your request for the Aurelia Sovereign Society has been transmitted to our senior concierge.');">
+<input class="flex-1 bg-white border border-[#dfcaa0] rounded-lg px-space-md py-3.5 text-text-obsidian font-body-sm text-body-sm focus:outline-none focus:border-primary placeholder:text-slate-400 shadow-inner font-medium" placeholder="Enter your confidential email address" required="" type="email"/>
+<button class="px-space-xl py-3.5 rounded-lg bg-gradient-to-r from-[#b8860b] via-[#d4af37] to-[#c59b27] text-white font-label-caps text-label-caps uppercase tracking-[0.16em] font-semibold hover:shadow-[0_4px_20px_rgba(184,134,11,0.4)] transition-all whitespace-nowrap" type="submit">
+            Request Invitation
+          </button>
+</form>
+<p class="font-body-sm text-body-sm text-text-slate text-xs font-medium">
+          Discretion guaranteed. Membership is strictly limited to maintain passenger exclusivity.
+        </p>
+</div>
+</div>
+</section>
+<!-- Interactive Tab Switcher Script -->
+<script>
+    function switchTab(type) {
+      const tabs = ['voyages', 'weekend', 'charter'];
+      tabs.forEach(t => {
+        const btn = document.getElementById('tab-' + t);
+        if (t === type) {
+          btn.className = 'tab-btn px-space-lg py-space-xs rounded-full font-label-caps text-label-caps uppercase tracking-wider transition-all duration-300 bg-[#f9f5ea] text-primary border border-primary/40 shadow-sm flex items-center gap-2 font-semibold';
+        } else {
+          btn.className = 'tab-btn px-space-lg py-space-xs rounded-full font-label-caps text-label-caps uppercase tracking-wider text-text-slate hover:text-text-obsidian hover:bg-[#faf8f5] transition-all duration-300 flex items-center gap-2 font-medium';
+        }
+      });
+    }
+  </script>
+</div></main><footer class="w-full bg-[#111a28] border-t border-[#dfcaa0]/30 pt-space-4xl pb-space-2xl text-slate-100"><div class="max-w-[88rem] mx-auto px-gutter-desktop"><div class="grid grid-cols-1 lg:grid-cols-12 gap-space-2xl pb-space-3xl border-b border-slate-700/60"><div class="lg:col-span-5 flex flex-col justify-between pr-space-xl"><div class="space-y-space-md"><span class="font-label-caps text-label-caps text-[#e9c349] tracking-[0.25em] uppercase font-semibold">PRIVATE DISPATCH</span><h3 class="font-headline-sm text-headline-sm text-white">The Aurelia Gazette</h3><p class="font-body-md text-body-md text-slate-300 max-w-lg">Receive bespoke nautical itineraries, preview private deck configurations, and access unlisted charter expeditions across remote archipelagoes.</p></div><form class="mt-space-lg flex max-w-md items-center"><div class="relative flex-1"><input class="w-full bg-slate-800/80 border border-slate-600 text-white px-space-md py-space-sm rounded-l-lg font-body-sm text-body-sm focus:outline-none focus:border-[#e9c349] placeholder:text-slate-400" placeholder="Enter your private email" type="email"/></div><button class="bg-[#c59b27] hover:bg-[#b8860b] text-white font-label-caps text-label-caps uppercase tracking-widest px-space-lg py-space-sm rounded-r-lg font-semibold transition-colors whitespace-nowrap" type="button">Subscribe</button></form></div><div class="lg:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-space-lg"><div class="space-y-space-md"><span class="font-label-caps text-label-caps text-[#e9c349] tracking-[0.2em] uppercase block font-semibold">THE FLEET</span><ul class="space-y-space-xs font-body-sm text-body-sm text-slate-300"><li class="hover:text-[#e9c349] transition-colors"><a data-path="the-fleet" href="#">Aurelia Sovereign</a></li><li class="hover:text-[#e9c349] transition-colors"><a data-path="the-fleet" href="#">Aurelia Celestia</a></li><li class="hover:text-[#e9c349] transition-colors"><a data-path="the-fleet" href="#">Aurelia Aurora Borealis</a></li><li class="hover:text-[#e9c349] transition-colors"><a data-path="the-fleet" href="#">Private Zodiac Expeditions</a></li><li class="hover:text-[#e9c349] transition-colors"><a data-path="the-fleet" href="#">Deck &amp; Helipad Specs</a></li></ul></div><div class="space-y-space-md"><span class="font-label-caps text-label-caps text-[#e9c349] tracking-[0.2em] uppercase block font-semibold">GLOBAL PASSAGES</span><ul class="space-y-space-xs font-body-sm text-body-sm text-slate-300"><li class="hover:text-[#e9c349] transition-colors"><a data-path="destinations" href="#">Mediterranean Grand Tour</a></li><li class="hover:text-[#e9c349] transition-colors"><a data-path="destinations" href="#">Antarctic Ice Odyssey</a></li><li class="hover:text-[#e9c349] transition-colors"><a data-path="destinations" href="#">Norwegian Fjords Solstice</a></li><li class="hover:text-[#e9c349] transition-colors"><a data-path="destinations" href="#">French Polynesian Atolls</a></li><li class="hover:text-[#e9c349] transition-colors"><a data-path="destinations" href="#">Kyoto &amp; Sea of Japan</a></li></ul></div><div class="space-y-space-md"><span class="font-label-caps text-label-caps text-[#e9c349] tracking-[0.2em] uppercase block font-semibold">CONCIERGE &amp; STATUTE</span><ul class="space-y-space-xs font-body-sm text-body-sm text-slate-300"><li class="hover:text-[#e9c349] transition-colors"><a data-path="suites-and-penthouses" href="#">Stateroom Selection</a></li><li class="hover:text-[#e9c349] transition-colors"><a data-path="culinary-and-wellness" href="#">Michelin Dining Atelier</a></li><li class="hover:text-[#e9c349] transition-colors"><a data-path="special-offers" href="#">Private Air &amp; Port Transfers</a></li><li class="hover:text-[#e9c349] transition-colors"><a data-path="special-offers" href="#">Maritime Registry &amp; Lloyd's</a></li><li class="hover:text-[#e9c349] transition-colors"><a data-path="special-offers" href="#">Terms of Charter</a></li></ul></div></div></div><div class="pt-space-xl flex flex-col md:flex-row items-center justify-between gap-space-lg text-slate-400"><div class="flex flex-wrap items-center gap-space-xl"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[#e9c349] text-lg">verified_user</span><span class="font-label-caps text-label-caps uppercase tracking-wider text-slate-300">SOLAS Certified</span></div><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[#e9c349] text-lg">shield</span><span class="font-label-caps text-label-caps uppercase tracking-wider text-slate-300">Lloyd's Register A1+</span></div><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[#e9c349] text-lg">lock</span><span class="font-label-caps text-label-caps uppercase tracking-wider text-slate-300">256-Bit Escrow Vault</span></div><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[#e9c349] text-lg">star</span><span class="font-label-caps text-label-caps uppercase tracking-wider text-slate-300">Forbes 5-Star Nautical</span></div></div><div class="text-right"><p class="font-body-sm text-body-sm text-slate-400">© 2025 Aurelia Ocean Voyages Ltd. Monaco • London • Singapore. All rights reserved.</p></div></div></div></footer></body></html>
