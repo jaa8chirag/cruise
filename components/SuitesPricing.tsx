@@ -1,258 +1,187 @@
 'use client';
 
-import { useState } from 'react';
-import { Check, X, Crown, Sparkles } from 'lucide-react';
+import Image from 'next/image';
+import { BedDouble, Check, Sparkles } from 'lucide-react';
 
 interface SuitesPricingProps {
   onReserveSuite?: (suiteName: string, price: string) => void;
 }
 
 export default function SuitesPricing({ onReserveSuite }: SuitesPricingProps) {
-  const [durationTab, setDurationTab] = useState<'3' | '5' | '7'>('5');
-
   const handleReserve = (name: string, price: string) => {
     if (onReserveSuite) onReserveSuite(name, price);
   };
 
   return (
-    <section id="suites" className="w-full py-16 md:py-24 px-4 md:px-8 max-w-[88rem] mx-auto">
-      
-      {/* Header & Tabs */}
-      <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
-        <div className="space-y-2">
-          <span className="font-jakarta text-xs text-amber-600 dark:text-amber-400 tracking-[0.25em] uppercase font-bold">
-            BESPOKE STATEROOMS
-          </span>
-          <h2 className="font-playfair text-3xl md:text-5xl text-slate-900 dark:text-slate-100 font-bold">
-            Select Your All-Inclusive Residence
-          </h2>
-          <p className="font-jakarta text-slate-600 dark:text-slate-400 text-sm md:text-base max-w-xl">
-            Every stateroom aboard Oshin Shipping is an expansive, private terrace suite facing the infinite horizon with dedicated butler assistance.
+    <section className="py-24 bg-white relative overflow-hidden" data-purpose="cabin-categories" id="staterooms">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8">
+        
+        {/* Header */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+          <div>
+            <div className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-ocean-700 bg-ocean-50 px-3 py-1 rounded-full mb-3">
+              <BedDouble className="w-3.5 h-3.5 text-ocean-600" />
+              <span>Accommodations</span>
+            </div>
+            <h2 className="text-3xl sm:text-5xl font-bold text-deepnavy tracking-tight font-sans">
+              Luxury Cabins &amp; Staterooms
+            </h2>
+          </div>
+          <p className="text-slate-500 text-sm max-w-md leading-relaxed font-light">
+            From full panoramic master suites with private teak balconies to serene staterooms, each space in the Oshin Shipping fleet is crafted for supreme rest.
           </p>
         </div>
 
-        {/* Segmented Switcher */}
-        <div className="inline-flex p-1 bg-slate-200 dark:bg-slate-800 rounded-lg border border-slate-300 dark:border-slate-700">
-          <button
-            onClick={() => setDurationTab('3')}
-            className={`px-4 py-2 rounded-md font-jakarta text-xs uppercase tracking-wider transition-all ${
-              durationTab === '3'
-                ? 'bg-amber-500 text-slate-950 font-bold shadow'
-                : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100'
-            }`}
-          >
-            3-Night Escapes
-          </button>
-          <button
-            onClick={() => setDurationTab('5')}
-            className={`px-4 py-2 rounded-md font-jakarta text-xs uppercase tracking-wider transition-all ${
-              durationTab === '5'
-                ? 'bg-amber-500 text-slate-950 font-bold shadow'
-                : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100'
-            }`}
-          >
-            5-Night Journeys
-          </button>
-          <button
-            onClick={() => setDurationTab('7')}
-            className={`px-4 py-2 rounded-md font-jakarta text-xs uppercase tracking-wider transition-all ${
-              durationTab === '7'
-                ? 'bg-amber-500 text-slate-950 font-bold shadow'
-                : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100'
-            }`}
-          >
-            7+ Nights Grand
-          </button>
-        </div>
-      </div>
-
-      {/* 3 Tier Pricing Cards Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
-        
-        {/* Tier 1: Deluxe Ocean Balcony */}
-        <div className="bg-white dark:bg-[#151c26] rounded-2xl p-6 md:p-8 border border-slate-200 dark:border-slate-800 hover:border-amber-500/40 transition-all duration-300 flex flex-col justify-between shadow-xl">
-          <div>
-            <div className="flex items-center justify-between pb-4 border-b border-slate-200 dark:border-slate-800">
-              <span className="font-jakarta text-xs text-slate-500 dark:text-slate-400 uppercase tracking-wider font-semibold">
-                Level I Residence
-              </span>
-              <span className="font-jakarta text-xs text-slate-500 dark:text-slate-400">
-                350 sq.ft • Veranda
-              </span>
-            </div>
+        {/* Featured Hero Penthouse Ocean Suite */}
+        <div className="bg-slate-50 rounded-3xl border border-slate-200/80 p-6 sm:p-8 mb-10 shadow-sm">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             
-            <h3 className="font-playfair text-2xl font-bold text-slate-900 dark:text-slate-100 mt-4">
-              Deluxe Ocean Balcony Suite
-            </h3>
-            <p className="font-jakarta text-xs text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
-              Teak-decked private terrace, marble bath with rainfall shower, Dyson amenities, and 300-thread-count Egyptian linens.
-            </p>
-
-            <div className="my-6">
-              <span className="font-playfair text-4xl text-amber-600 dark:text-amber-400 font-bold leading-none">
-                {durationTab === '3' ? '$1,650' : durationTab === '5' ? '$1,450' : '$1,290'}
-              </span>
-              <span className="font-jakarta text-xs text-slate-500 dark:text-slate-400"> / suite per night</span>
+            <div className="lg:col-span-7 rounded-2xl overflow-hidden shadow-lg aspect-[16/10] bg-slate-200 relative">
+              <Image
+                src="/images/stitch_stateroom.png"
+                alt="Royal Penthouse Ocean Suite Interior"
+                fill
+                className="object-cover hover:scale-105 transition-transform duration-700"
+              />
             </div>
 
-            <ul className="space-y-3 font-jakarta text-xs text-slate-700 dark:text-slate-300 pt-4 border-t border-slate-200 dark:border-slate-800">
-              <li className="flex items-center gap-2">
-                <Check className="w-4 h-4 text-amber-500 shrink-0" />
-                <span>Unlimited Dining at all 6 specialty venues</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <Check className="w-4 h-4 text-amber-500 shrink-0" />
-                <span>Sommelier-selected fine wine & spirits</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <Check className="w-4 h-4 text-amber-500 shrink-0" />
-                <span>Ultra-fast Starlink Maritime WiFi</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <Check className="w-4 h-4 text-amber-500 shrink-0" />
-                <span>Shared Zodiac shore landings</span>
-              </li>
-              <li className="flex items-center gap-2 opacity-40">
-                <X className="w-4 h-4 shrink-0" />
-                <span>24/7 Dedicated Private Butler</span>
-              </li>
-            </ul>
-          </div>
+            <div className="lg:col-span-5 flex flex-col justify-between h-full py-2">
+              <div>
+                <div className="inline-flex items-center gap-1 text-[11px] font-bold uppercase tracking-widest text-ocean-700 bg-ocean-100/70 px-2.5 py-1 rounded-full mb-3">
+                  ★ Signature Suite
+                </div>
+                <h3 className="text-2xl sm:text-3xl font-extrabold text-deepnavy font-sans">
+                  Royal Penthouse Ocean Suite
+                </h3>
+                <p className="text-sm text-slate-500 mt-2 leading-relaxed font-light">
+                  Floor-to-ceiling panoramic ocean balcony windows, Italian marble ensuite bathroom with jetted spa tub, handcrafted king bedding, and 24/7 private butler service.
+                </p>
 
-          <div className="mt-8">
-            <button
-              onClick={() => handleReserve('Deluxe Ocean Balcony Suite', durationTab === '3' ? '$1,650' : '$1,450')}
-              className="w-full py-3.5 rounded-lg border border-amber-500/40 text-amber-600 dark:text-amber-400 hover:bg-amber-500/10 font-jakarta text-xs uppercase tracking-widest transition-all font-bold"
-            >
-              Reserve Balcony Suite
-            </button>
+                {/* Feature Pills */}
+                <div className="grid grid-cols-2 gap-2.5 mt-5">
+                  <div className="flex items-center gap-2 text-xs font-medium text-slate-700">
+                    <Check className="w-4 h-4 text-ocean-600 shrink-0" />
+                    <span>850 sq.ft + 240 sq.ft Balcony</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-xs font-medium text-slate-700">
+                    <Check className="w-4 h-4 text-ocean-600 shrink-0" />
+                    <span>Personal 24/7 Butler</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-xs font-medium text-slate-700">
+                    <Check className="w-4 h-4 text-ocean-600 shrink-0" />
+                    <span>Complimentary Champagne Bar</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-xs font-medium text-slate-700">
+                    <Check className="w-4 h-4 text-ocean-600 shrink-0" />
+                    <span>Priority VIP Disembarkation</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="pt-6 border-t border-slate-200/80 mt-6 flex items-center justify-between">
+                <div>
+                  <span className="text-xs text-slate-400 block uppercase tracking-wider">From</span>
+                  <span className="text-3xl font-bold text-deepnavy font-sans">
+                    $780 <span className="text-xs font-normal text-slate-500">/ night</span>
+                  </span>
+                </div>
+                <button
+                  onClick={() => handleReserve('Royal Penthouse Ocean Suite', '$780/night')}
+                  className="px-7 py-3 bg-deepnavy hover:bg-ocean-700 text-white rounded-full text-xs font-bold uppercase tracking-widest transition-colors shadow-md active:scale-95"
+                >
+                  Reserve Suite
+                </button>
+              </div>
+
+            </div>
+
           </div>
         </div>
 
-        {/* Tier 2: Signature Horizon Penthouse (Featured) */}
-        <div className="bg-slate-50 dark:bg-[#19202b] relative rounded-2xl p-6 md:p-8 border-2 border-amber-500 shadow-[0_0_40px_rgba(212,175,55,0.25)] flex flex-col justify-between transform lg:-translate-y-3">
-          <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-amber-500 to-yellow-600 text-slate-950 px-4 py-1 rounded-full font-jakarta text-[10px] uppercase tracking-widest font-bold shadow-md flex items-center gap-1">
-            <Crown className="w-3 h-3" />
-            Most Favored Residence
-          </div>
-
-          <div>
-            <div className="flex items-center justify-between pb-4 border-b border-amber-500/30 mt-2">
-              <span className="font-jakarta text-xs text-amber-600 dark:text-amber-400 uppercase tracking-wider font-bold">
-                Level II Penthouse
-              </span>
-              <span className="font-jakarta text-xs text-amber-600 dark:text-amber-400 font-semibold">
-                750 sq.ft • Duplex Terrace
-              </span>
+        {/* 3 Stateroom Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          
+          {/* Card 1 */}
+          <div className="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-sm flex flex-col justify-between hover:-translate-y-1 transition-transform">
+            <div>
+              <div className="text-xs font-semibold uppercase text-ocean-600 mb-1">Deck 8 – 11</div>
+              <h4 className="text-xl font-bold text-deepnavy mb-2 font-sans">Deluxe Veranda Stateroom</h4>
+              <p className="text-xs text-slate-500 leading-relaxed font-light">
+                Private open-air glass veranda with comfortable deck seating, separate vanity area, and interactive smart stateroom controls.
+              </p>
+              <div className="space-y-1.5 mt-4 text-xs text-slate-600">
+                <div className="flex items-center gap-2"><span>•</span> 320 sq.ft with teak veranda</div>
+                <div className="flex items-center gap-2"><span>•</span> Queen bed or two twin beds</div>
+                <div className="flex items-center gap-2"><span>•</span> 24-hour in-room dining</div>
+              </div>
             </div>
-
-            <h3 className="font-playfair text-2xl font-bold text-slate-900 dark:text-slate-100 mt-4">
-              Signature Horizon Penthouse
-            </h3>
-            <p className="font-jakarta text-xs text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
-              Expansive open-plan living salon, outdoor daybeds, dual walk-in closets, bespoke minibar restocked daily, and Hermès amenities.
-            </p>
-
-            <div className="my-6">
-              <span className="font-playfair text-4xl text-amber-600 dark:text-amber-400 font-bold leading-none">
-                {durationTab === '3' ? '$3,150' : durationTab === '5' ? '$2,850' : '$2,550'}
+            <div className="pt-6 mt-6 border-t border-slate-100 flex items-center justify-between">
+              <span className="text-xl font-bold text-deepnavy font-sans">
+                $460 <span className="text-xs font-normal text-slate-500">/night</span>
               </span>
-              <span className="font-jakarta text-xs text-slate-500 dark:text-slate-400"> / suite per night</span>
+              <button
+                onClick={() => handleReserve('Deluxe Veranda Stateroom', '$460/night')}
+                className="px-4 py-2 rounded-full bg-slate-100 hover:bg-deepnavy hover:text-white text-deepnavy text-xs font-bold uppercase transition-colors"
+              >
+                Select
+              </button>
             </div>
-
-            <ul className="space-y-3 font-jakarta text-xs text-slate-800 dark:text-slate-200 pt-4 border-t border-amber-500/30">
-              <li className="flex items-center gap-2 font-semibold">
-                <Check className="w-4 h-4 text-amber-500 shrink-0" />
-                <span>24/7 Dedicated Private Butler Service</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <Check className="w-4 h-4 text-amber-500 shrink-0" />
-                <span>Priority Zodiac & Shore Expedition Tenders</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <Check className="w-4 h-4 text-amber-500 shrink-0" />
-                <span>Unlimited Krug & Dom Pérignon Champagne</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <Check className="w-4 h-4 text-amber-500 shrink-0" />
-                <span>$500 Aurum Spa Credit per sailing</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <Check className="w-4 h-4 text-amber-500 shrink-0" />
-                <span>Private Airport & Port Chauffeur Transfer</span>
-              </li>
-            </ul>
           </div>
 
-          <div className="mt-8">
-            <button
-              onClick={() => handleReserve('Signature Horizon Penthouse', durationTab === '3' ? '$3,150' : '$2,850')}
-              className="w-full py-4 rounded-lg bg-gradient-to-r from-amber-500 via-amber-400 to-yellow-600 text-slate-950 font-jakarta text-xs uppercase tracking-widest font-bold shadow-lg hover:shadow-[0_0_28px_rgba(212,175,55,0.6)] transition-all flex items-center justify-center gap-2"
-            >
-              <Sparkles className="w-4 h-4" />
-              <span>Reserve Horizon Penthouse</span>
-            </button>
-          </div>
-        </div>
-
-        {/* Tier 3: The Royal Aurelia Owner’s Suite */}
-        <div className="bg-white dark:bg-[#151c26] rounded-2xl p-6 md:p-8 border border-slate-200 dark:border-slate-800 hover:border-amber-500/40 transition-all duration-300 flex flex-col justify-between shadow-xl">
-          <div>
-            <div className="flex items-center justify-between pb-4 border-b border-slate-200 dark:border-slate-800">
-              <span className="font-jakarta text-xs text-slate-500 dark:text-slate-400 uppercase tracking-wider font-semibold">
-                The Sovereign Estate
-              </span>
-              <span className="font-jakarta text-xs text-slate-500 dark:text-slate-400">
-                1,600 sq.ft • Wrap Jacuzzi
-              </span>
+          {/* Card 2 */}
+          <div className="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-sm flex flex-col justify-between hover:-translate-y-1 transition-transform">
+            <div>
+              <div className="text-xs font-semibold uppercase text-ocean-600 mb-1">Deck 5 – 7</div>
+              <h4 className="text-xl font-bold text-deepnavy mb-2 font-sans">Oceanview Horizon Stateroom</h4>
+              <p className="text-xs text-slate-500 leading-relaxed font-light">
+                Large picture window with sweeping sea views, plush lounge sofa, marble shower with rainfall fixtures, and luxury toiletries.
+              </p>
+              <div className="space-y-1.5 mt-4 text-xs text-slate-600">
+                <div className="flex items-center gap-2"><span>•</span> 260 sq.ft living area</div>
+                <div className="flex items-center gap-2"><span>•</span> Large picture ocean window</div>
+                <div className="flex items-center gap-2"><span>•</span> Daily housekeeping &amp; turndown</div>
+              </div>
             </div>
-
-            <h3 className="font-playfair text-2xl font-bold text-slate-900 dark:text-slate-100 mt-4">
-              The Royal Oshin Owner’s Suite
-            </h3>
-            <p className="font-jakarta text-xs text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
-              Commanding bridge-view bow stateroom, private heated hydrotherapy pool, grand dining table for 8, and dedicated security salon.
-            </p>
-
-            <div className="my-6">
-              <span className="font-playfair text-4xl text-amber-600 dark:text-amber-400 font-bold leading-none">
-                {durationTab === '3' ? '$6,000' : durationTab === '5' ? '$5,500' : '$4,900'}
+            <div className="pt-6 mt-6 border-t border-slate-100 flex items-center justify-between">
+              <span className="text-xl font-bold text-deepnavy font-sans">
+                $380 <span className="text-xs font-normal text-slate-500">/night</span>
               </span>
-              <span className="font-jakarta text-xs text-slate-500 dark:text-slate-400"> / suite per night</span>
+              <button
+                onClick={() => handleReserve('Oceanview Horizon Stateroom', '$380/night')}
+                className="px-4 py-2 rounded-full bg-slate-100 hover:bg-deepnavy hover:text-white text-deepnavy text-xs font-bold uppercase transition-colors"
+              >
+                Select
+              </button>
             </div>
-
-            <ul className="space-y-3 font-jakarta text-xs text-slate-700 dark:text-slate-300 pt-4 border-t border-slate-200 dark:border-slate-800">
-              <li className="flex items-center gap-2">
-                <Check className="w-4 h-4 text-amber-500 shrink-0" />
-                <span className="font-semibold text-slate-900 dark:text-slate-100">Private Helicopter Deck Transfer to Ship</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <Check className="w-4 h-4 text-amber-500 shrink-0" />
-                <span className="font-semibold text-slate-900 dark:text-slate-100">In-Suite Personal Master Chef & Butler Team</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <Check className="w-4 h-4 text-amber-500 shrink-0" />
-                <span>Unrestricted Shore Excursions with Limousine</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <Check className="w-4 h-4 text-amber-500 shrink-0" />
-                <span>Unlimited Daily Spa Treatments</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <Check className="w-4 h-4 text-amber-500 shrink-0" />
-                <span>Bespoke Itinerary & Private Anchorages</span>
-              </li>
-            </ul>
           </div>
 
-          <div className="mt-8">
-            <button
-              onClick={() => handleReserve('The Royal Oshin Owner’s Suite', durationTab === '3' ? '$6,000' : '$5,500')}
-              className="w-full py-3.5 rounded-lg border border-amber-500/40 text-amber-600 dark:text-amber-400 hover:bg-amber-500/10 font-jakarta text-xs uppercase tracking-widest transition-all font-bold"
-            >
-              Inquire Sovereign Suite
-            </button>
+          {/* Card 3 */}
+          <div className="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-sm flex flex-col justify-between hover:-translate-y-1 transition-transform">
+            <div>
+              <div className="text-xs font-semibold uppercase text-ocean-600 mb-1">Deck 4 – 6</div>
+              <h4 className="text-xl font-bold text-deepnavy mb-2 font-sans">Classic Interior Luxury Cabin</h4>
+              <p className="text-xs text-slate-500 leading-relaxed font-light">
+                Quiet sanctuaries featuring virtual ocean displays, ambient circadian lighting, high-thread linens, and premium sound systems.
+              </p>
+              <div className="space-y-1.5 mt-4 text-xs text-slate-600">
+                <div className="flex items-center gap-2"><span>•</span> 210 sq.ft serene space</div>
+                <div className="flex items-center gap-2"><span>•</span> Virtual HD ocean balcony stream</div>
+                <div className="flex items-center gap-2"><span>•</span> Full access to all ship amenities</div>
+              </div>
+            </div>
+            <div className="pt-6 mt-6 border-t border-slate-100 flex items-center justify-between">
+              <span className="text-xl font-bold text-deepnavy font-sans">
+                $320 <span className="text-xs font-normal text-slate-500">/night</span>
+              </span>
+              <button
+                onClick={() => handleReserve('Classic Interior Luxury Cabin', '$320/night')}
+                className="px-4 py-2 rounded-full bg-slate-100 hover:bg-deepnavy hover:text-white text-deepnavy text-xs font-bold uppercase transition-colors"
+              >
+                Select
+              </button>
+            </div>
           </div>
+
         </div>
 
       </div>

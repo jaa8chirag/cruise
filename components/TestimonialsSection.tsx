@@ -1,82 +1,112 @@
 'use client';
 
-import { Star } from 'lucide-react';
+import { useState } from 'react';
+import Image from 'next/image';
+import { MessageSquare, ChevronLeft, ChevronRight, ShieldCheck, HeartHandshake, DollarSign } from 'lucide-react';
 
 export default function TestimonialsSection() {
+  const [currentIdx, setCurrentIdx] = useState(0);
+
+  const reviews = [
+    {
+      quote: "By far this is the best sea trip I've ever experienced. With Oshin Shipping, the culinary craft, panoramic suites, and stellar shore excursions redefine luxury comfort on water.",
+      author: "Andrew Gabriel",
+      role: "USA Tourist • Verified Voyager",
+      image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop"
+    },
+    {
+      quote: "The personalized attention from our butler and the zero-motion stabilizers made cruising through open sea completely relaxing. The private island day in the Bahamas was pure paradise.",
+      author: "Catherine & David Miller",
+      role: "London, UK • Penthouse Suite Guests",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop"
+    }
+  ];
+
+  const review = reviews[currentIdx];
+
+  const nextReview = () => {
+    setCurrentIdx((prev) => (prev + 1) % reviews.length);
+  };
+
+  const prevReview = () => {
+    setCurrentIdx((prev) => (prev - 1 + reviews.length) % reviews.length);
+  };
+
   return (
-    <section className="w-full py-16 md:py-24 px-4 md:px-8 max-w-[88rem] mx-auto">
-      <div className="text-center max-w-2xl mx-auto mb-12 space-y-2">
-        <span className="font-jakarta text-xs text-amber-600 dark:text-amber-400 tracking-[0.25em] uppercase font-bold">
-          CRITICAL ACCLAIM
-        </span>
-        <h2 className="font-playfair text-3xl md:text-5xl font-bold text-slate-900 dark:text-slate-100">
-          A Symphony of Praise
-        </h2>
-        <p className="font-jakarta text-slate-600 dark:text-slate-400 text-sm md:text-base">
-          Words from the global press and private voyagers.
-        </p>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <section className="py-24 bg-slate-50 border-t border-b border-slate-200/60" data-purpose="guest-testimonials">
+      <div className="max-w-5xl mx-auto px-6 sm:px-8 text-center">
         
-        {/* Quote 1 */}
-        <div className="bg-white dark:bg-[#151c26] p-8 rounded-2xl border border-slate-200 dark:border-slate-800 flex flex-col justify-between shadow-xl">
-          <div className="space-y-4">
-            <div className="text-amber-500 flex gap-1">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
-              ))}
+        {/* Tag */}
+        <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-ocean-700 bg-ocean-100/60 px-3 py-1 rounded-full mb-4">
+          <MessageSquare className="w-3.5 h-3.5 text-ocean-600" />
+          <span>Testimonials</span>
+        </div>
+
+        <h2 className="text-3xl sm:text-4xl font-bold text-deepnavy tracking-tight mb-12 font-sans">
+          Here&apos;s what people saying
+        </h2>
+
+        {/* Quote Block */}
+        <blockquote className="text-xl sm:text-3xl font-semibold text-deepnavy/90 leading-snug sm:leading-relaxed max-w-3xl mx-auto mb-10 font-sans">
+          &ldquo;{review.quote}&rdquo;
+        </blockquote>
+
+        {/* Author & Carousel Buttons */}
+        <div className="flex items-center justify-between max-w-xs mx-auto mb-16 pt-2">
+          <div className="flex items-center gap-3 text-left">
+            <div className="w-11 h-11 rounded-full bg-slate-300 overflow-hidden ring-2 ring-ocean-500/30 relative">
+              <Image
+                src={review.image}
+                alt={review.author}
+                fill
+                className="object-cover"
+              />
             </div>
-            <blockquote className="font-playfair text-base md:text-lg text-slate-800 dark:text-slate-200 font-light italic leading-relaxed">
-              “Oshin Shipping redefines nautical hospitality. The Lakshadweep passage felt less like a cruise and more like an intimate grand yacht charter with Michelin-pedigree dining at every single meal.”
-            </blockquote>
+            <div>
+              <div className="text-sm font-bold text-deepnavy font-sans">{review.author}</div>
+              <div className="text-xs text-slate-500 font-light">{review.role}</div>
+            </div>
           </div>
-          <div className="pt-6 mt-6 border-t border-slate-200 dark:border-slate-800">
-            <p className="font-playfair font-bold text-slate-900 dark:text-slate-100">Condé Nast Traveler</p>
-            <span className="font-jakarta text-[11px] text-amber-600 dark:text-amber-400 uppercase tracking-wider font-semibold">
-              Gold List 2025 Best Maritime Experience
-            </span>
+
+          <div className="flex items-center gap-2">
+            <button
+              onClick={prevReview}
+              aria-label="Previous review"
+              className="w-8 h-8 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-600 hover:bg-ocean-600 hover:text-white transition-colors"
+            >
+              <ChevronLeft className="w-4 h-4" />
+            </button>
+            <button
+              onClick={nextReview}
+              aria-label="Next review"
+              className="w-8 h-8 rounded-full bg-deepnavy text-white flex items-center justify-center hover:bg-ocean-700 transition-colors shadow-sm"
+            >
+              <ChevronRight className="w-4 h-4" />
+            </button>
           </div>
         </div>
 
-        {/* Quote 2 */}
-        <div className="bg-white dark:bg-[#151c26] p-8 rounded-2xl border border-slate-200 dark:border-slate-800 flex flex-col justify-between shadow-xl">
-          <div className="space-y-4">
-            <div className="text-amber-500 flex gap-1">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
-              ))}
-            </div>
-            <blockquote className="font-playfair text-base md:text-lg text-slate-800 dark:text-slate-200 font-light italic leading-relaxed">
-              “From the zero-noise stabilization to the private butler service who arranged our secluded sunset sandbank in Kadmat, Oshin Shipping is without peer in the Indian Ocean.”
-            </blockquote>
+        {/* Trust Metrics Bar */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto pt-6 text-left">
+          
+          <div className="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm">
+            <div className="text-3xl font-extrabold text-deepnavy mb-1 font-sans">24/7</div>
+            <div className="text-sm font-bold text-slate-700 font-sans">Support Agent</div>
+            <p className="text-xs text-slate-400 mt-1 font-light">Travel with total peace of mind</p>
           </div>
-          <div className="pt-6 mt-6 border-t border-slate-200 dark:border-slate-800">
-            <p className="font-playfair font-bold text-slate-900 dark:text-slate-100">Sir David & Lady Sterling</p>
-            <span className="font-jakarta text-[11px] text-amber-600 dark:text-amber-400 uppercase tracking-wider font-semibold">
-              Horizon Penthouse • Mumbai-Dubai Voyage
-            </span>
-          </div>
-        </div>
 
-        {/* Quote 3 */}
-        <div className="bg-white dark:bg-[#151c26] p-8 rounded-2xl border border-slate-200 dark:border-slate-800 flex flex-col justify-between shadow-xl">
-          <div className="space-y-4">
-            <div className="text-amber-500 flex gap-1">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
-              ))}
-            </div>
-            <blockquote className="font-playfair text-base md:text-lg text-slate-800 dark:text-slate-200 font-light italic leading-relaxed">
-              “The quiet luxury design aesthetic—midnight wood, brushed brass, and vast sea view glazing—sets the benchmark for modern expedition vessels.”
-            </blockquote>
+          <div className="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm">
+            <div className="text-3xl font-extrabold text-deepnavy mb-1 font-sans">100%</div>
+            <div className="text-sm font-bold text-slate-700 font-sans">Price Guarantee</div>
+            <p className="text-xs text-slate-400 mt-1 font-light">Book with confidence knowing best rates</p>
           </div>
-          <div className="pt-6 mt-6 border-t border-slate-200 dark:border-slate-800">
-            <p className="font-playfair font-bold text-slate-900 dark:text-slate-100">Robb Report</p>
-            <span className="font-jakarta text-[11px] text-amber-600 dark:text-amber-400 uppercase tracking-wider font-semibold">
-              Superyacht Design of the Year
-            </span>
+
+          <div className="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm">
+            <div className="text-3xl font-extrabold text-deepnavy mb-1 font-sans">0</div>
+            <div className="text-sm font-bold text-slate-700 font-sans">Hidden Fees</div>
+            <p className="text-xs text-slate-400 mt-1 font-light">Full transparent pricing on all voyages</p>
           </div>
+
         </div>
 
       </div>
