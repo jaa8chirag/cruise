@@ -67,9 +67,9 @@ export default function PassengerDecksAmenities() {
             return (
               <div
                 key={idx}
-                className="p-6 rounded-3xl bg-slate-50 border border-slate-200/80 flex items-start gap-4 hover:border-ocean-300 transition-colors group"
+                className="p-6 rounded-[2rem] bg-slate-50 border-2 border-sky-200/80 hover:border-ocean-500 shadow-md shadow-sky-100/30 flex items-start gap-4 hover:shadow-xl hover:shadow-sky-100/50 transition-all group"
               >
-                <div className="w-12 h-12 rounded-2xl bg-ocean-100 text-ocean-700 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                <div className="w-12 h-12 rounded-2xl bg-ocean-100 text-ocean-700 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform border border-sky-200">
                   <Icon className="w-6 h-6" />
                 </div>
                 <div>

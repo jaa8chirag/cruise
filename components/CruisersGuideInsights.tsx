@@ -92,9 +92,9 @@ export default function CruisersGuideInsights() {
           {blogPosts.map((post, idx) => (
             <article
               key={idx}
-              className="bg-white rounded-3xl p-4 border border-slate-200/80 shadow-sm flex flex-col group hover:-translate-y-1.5 transition-transform duration-300"
+              className="bg-white rounded-[2rem] p-4 border-2 border-sky-200/80 hover:border-ocean-500 shadow-md shadow-sky-100/40 flex flex-col group hover:-translate-y-1.5 transition-all duration-300"
             >
-              <div className="relative h-48 rounded-2xl overflow-hidden mb-3.5 bg-slate-100">
+              <div className="relative h-48 rounded-2xl overflow-hidden mb-3.5 bg-slate-100 border border-sky-100">
                 <Image
                   src={post.image}
                   alt={post.title}

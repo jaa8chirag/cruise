@@ -33,10 +33,10 @@ export default function SuitesPricing({ onReserveSuite }: SuitesPricingProps) {
         </div>
 
         {/* Featured Hero Penthouse Ocean Suite */}
-        <div className="bg-slate-50 rounded-3xl border border-slate-200/80 p-6 sm:p-8 mb-10 shadow-sm">
+        <div className="bg-slate-50 rounded-[2.5rem] border-2 border-sky-200/90 hover:border-ocean-500 p-6 sm:p-8 mb-10 shadow-lg shadow-sky-100/40 transition-all duration-300">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             
-            <div className="lg:col-span-7 rounded-2xl overflow-hidden shadow-lg aspect-[16/10] bg-slate-200 relative">
+            <div className="lg:col-span-7 rounded-2xl overflow-hidden shadow-lg aspect-[16/10] bg-slate-200 relative border border-sky-100">
               <Image
                 src="/images/stitch_stateroom.png"
                 alt="Royal Penthouse Ocean Suite Interior"
@@ -102,7 +102,7 @@ export default function SuitesPricing({ onReserveSuite }: SuitesPricingProps) {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           
           {/* Card 1 */}
-          <div className="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-sm flex flex-col justify-between hover:-translate-y-1 transition-transform">
+          <div className="bg-white rounded-[2rem] p-6 border-2 border-sky-200/80 hover:border-ocean-500 shadow-md shadow-sky-100/40 flex flex-col justify-between hover:-translate-y-1 transition-all">
             <div>
               <div className="text-xs font-semibold uppercase text-ocean-600 mb-1">Deck 8 – 11</div>
               <h4 className="text-xl font-bold text-deepnavy mb-2 font-sans">Deluxe Veranda Stateroom</h4>
@@ -129,7 +129,7 @@ export default function SuitesPricing({ onReserveSuite }: SuitesPricingProps) {
           </div>
 
           {/* Card 2 */}
-          <div className="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-sm flex flex-col justify-between hover:-translate-y-1 transition-transform">
+          <div className="bg-white rounded-[2rem] p-6 border-2 border-sky-200/80 hover:border-ocean-500 shadow-md shadow-sky-100/40 flex flex-col justify-between hover:-translate-y-1 transition-all">
             <div>
               <div className="text-xs font-semibold uppercase text-ocean-600 mb-1">Deck 5 – 7</div>
               <h4 className="text-xl font-bold text-deepnavy mb-2 font-sans">Oceanview Horizon Stateroom</h4>
@@ -156,7 +156,7 @@ export default function SuitesPricing({ onReserveSuite }: SuitesPricingProps) {
           </div>
 
           {/* Card 3 */}
-          <div className="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-sm flex flex-col justify-between hover:-translate-y-1 transition-transform">
+          <div className="bg-white rounded-[2rem] p-6 border-2 border-sky-200/80 hover:border-ocean-500 shadow-md shadow-sky-100/40 flex flex-col justify-between hover:-translate-y-1 transition-all">
             <div>
               <div className="text-xs font-semibold uppercase text-ocean-600 mb-1">Deck 4 – 6</div>
               <h4 className="text-xl font-bold text-deepnavy mb-2 font-sans">Classic Interior Luxury Cabin</h4>

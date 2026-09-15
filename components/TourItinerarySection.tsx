@@ -138,7 +138,7 @@ export default function TourItinerarySection({ onSelectCabin }: TourItinerarySec
           {days.map((d, index) => (
             <div
               key={index}
-              className="p-6 sm:p-7 rounded-3xl bg-slate-50 border border-slate-200/80 hover:border-ocean-300 transition-colors flex flex-col md:flex-row md:items-center justify-between gap-6 group"
+              className="p-6 sm:p-7 rounded-[2rem] bg-slate-50 border-2 border-sky-200/70 hover:border-ocean-500 shadow-sm hover:shadow-lg hover:shadow-sky-100/30 transition-all duration-300 flex flex-col md:flex-row md:items-center justify-between gap-6 group"
             >
               <div className="flex items-start gap-4">
                 <div className={`w-12 h-12 rounded-2xl ${index % 2 === 0 ? 'bg-ocean-600' : 'bg-deepnavy'} text-white font-extrabold text-lg flex items-center justify-center shrink-0 shadow-md font-sans`}>
