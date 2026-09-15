@@ -250,12 +250,12 @@ export default function EmotionalWorldSection() {
 
               {/* Minimal Line Art Icons Row from Mood Board */}
               <div className="flex items-center justify-around pt-3 text-slate-400 dark:text-sky-300/60 border-t border-slate-100 dark:border-sky-500/20">
-                <Ship className="w-5 h-5 hover:text-[#29aae0] transition-colors" title="Cruise Ship" />
-                <Palmtree className="w-5 h-5 hover:text-[#29aae0] transition-colors" title="Tropical Island" />
-                <Camera className="w-5 h-5 hover:text-[#29aae0] transition-colors" title="Photography" />
-                <Wine className="w-5 h-5 hover:text-[#29aae0] transition-colors" title="Sunset Cocktails" />
-                <Mountain className="w-5 h-5 hover:text-[#29aae0] transition-colors" title="Expeditions" />
-                <Anchor className="w-5 h-5 hover:text-[#29aae0] transition-colors" title="Ports of Call" />
+                <span title="Cruise Ship"><Ship className="w-5 h-5 hover:text-[#29aae0] transition-colors" /></span>
+                <span title="Tropical Island"><Palmtree className="w-5 h-5 hover:text-[#29aae0] transition-colors" /></span>
+                <span title="Photography"><Camera className="w-5 h-5 hover:text-[#29aae0] transition-colors" /></span>
+                <span title="Sunset Cocktails"><Wine className="w-5 h-5 hover:text-[#29aae0] transition-colors" /></span>
+                <span title="Expeditions"><Mountain className="w-5 h-5 hover:text-[#29aae0] transition-colors" /></span>
+                <span title="Ports of Call"><Anchor className="w-5 h-5 hover:text-[#29aae0] transition-colors" /></span>
               </div>
 
             </div>
